@@ -1,0 +1,30 @@
+#java specific
+*.class
+*.jar
+
+### Gradle ###
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+/.idea/
+*.iws
+*.iml
+*.ipr
+
+/logs
+
+/version_1/build/
+/version_1/out/
+/version_1/logs/
+
