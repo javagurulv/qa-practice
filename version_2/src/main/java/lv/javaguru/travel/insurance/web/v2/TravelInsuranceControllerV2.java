@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller
+//@Controller
 public class TravelInsuranceControllerV2 {
 
     @Autowired private TravelCalculatePremiumService service;
