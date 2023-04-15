@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ClassifierRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ClassifierRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/lv.javaguru.travel.insurance.core.repositories.html">lv.javaguru.travel.insurance.core.repositories</a> &gt; ClassifierRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.190s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">injectedRepositoryAreNotNull()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldFindRiskTypeClassifier()</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldNotFindFakeClassifier()</td>
+<td class="success">0.171s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>09:16:48,655 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+09:16:48,655 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/javaguru/projects/qa-practice/version_1/build/resources/main/logback.xml]
+09:16:48,708 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+09:16:48,712 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+09:16:48,714 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [CONSOLE]
+09:16:48,718 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+09:16:48,739 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+09:16:48,741 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE_APPENDER]
+09:16:48,742 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+09:16:48,749 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@365625031 - No compression will be used
+09:16:48,749 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@365625031 - Will use the pattern ./logs/archived/application-logger-%d{yyyy-MM-dd}.%i.log for the active file
+09:16:48,751 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5b444398 - The date pattern is 'yyyy-MM-dd' from file name pattern './logs/archived/application-logger-%d{yyyy-MM-dd}.%i.log'.
+09:16:48,751 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5b444398 - Roll-over at midnight.
+09:16:48,759 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5b444398 - Setting initial period to Sat Apr 15 09:14:42 EEST 2023
+09:16:48,760 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5b444398 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+09:16:48,760 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5b444398 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+09:16:48,762 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_APPENDER] - Active log file name: ./logs/application-logger.log
+09:16:48,762 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_APPENDER] - File property is set to [./logs/application-logger.log]
+09:16:48,762 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+09:16:48,762 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [REQUEST_RESPONSE_FILE_APPENDER]
+09:16:48,762 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+09:16:48,764 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@212963786 - No compression will be used
+09:16:48,764 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@212963786 - Will use the pattern ./logs/archived/request-response-logger-%d{yyyy-MM-dd}.%i.log for the active file
+09:16:48,764 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@42f48531 - The date pattern is 'yyyy-MM-dd' from file name pattern './logs/archived/request-response-logger-%d{yyyy-MM-dd}.%i.log'.
+09:16:48,764 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@42f48531 - Roll-over at midnight.
+09:16:48,765 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@42f48531 - Setting initial period to Sat Apr 15 09:14:42 EEST 2023
+09:16:48,765 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@42f48531 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+09:16:48,765 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@42f48531 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+09:16:48,765 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[REQUEST_RESPONSE_FILE_APPENDER] - Active log file name: ./logs/request-response-logger.log
+09:16:48,765 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[REQUEST_RESPONSE_FILE_APPENDER] - File property is set to [./logs/request-response-logger.log]
+09:16:48,765 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+09:16:48,765 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[ROOT]
+09:16:48,765 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE_APPENDER] to Logger[ROOT]
+09:16:48,766 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [lv.javaguru.travel.insurance.rest.v1.TravelCalculatePremiumRequestLoggerV1] to INFO
+09:16:48,766 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [REQUEST_RESPONSE_FILE_APPENDER] to Logger[lv.javaguru.travel.insurance.rest.v1.TravelCalculatePremiumRequestLoggerV1]
+09:16:48,766 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [lv.javaguru.travel.insurance.rest.v1.TravelCalculatePremiumResponseLoggerV1] to INFO
+09:16:48,766 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [REQUEST_RESPONSE_FILE_APPENDER] to Logger[lv.javaguru.travel.insurance.rest.v1.TravelCalculatePremiumResponseLoggerV1]
+09:16:48,766 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+09:16:48,766 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@a776e - Registering current configuration as safe fallback point
+
+2023-04-15 09:16:48,823 [Test worker] INFO  o.s.b.t.a.o.j.DataJpaTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest], using SpringBootContextLoader
+2023-04-15 09:16:48,828 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-04-15 09:16:48,828 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest]: ClassifierRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-15 09:16:48,918 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration lv.javaguru.travel.insurance.InsuranceApplication for test class lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest
+2023-04-15 09:16:48,921 [Test worker] INFO  o.s.b.t.a.o.j.DataJpaTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-04-15 09:16:48,936 [Test worker] INFO  o.s.b.t.a.o.j.DataJpaTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@51c929ae, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c8bdd5b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@29d2d081, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@40e4ea87, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@58783f6c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3a7b503d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@512d92b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@62c5bbdc, org.springframework.test.context.event.EventPublishingTestExecutionListener@7bdf6bb7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1bc53649, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@88d6f9b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@47d93e0d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@475b7792, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@751e664e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@160c3ec1]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.5)
+
+2023-04-15 09:16:49,184 [Test worker] INFO  l.j.t.i.c.r.ClassifierRepositoryTest - Starting ClassifierRepositoryTest using Java 18.0.2 on VSAVONINS with PID 16144 (started by admin in C:\javaguru\projects\qa-practice\version_1)
+2023-04-15 09:16:49,185 [Test worker] INFO  l.j.t.i.c.r.ClassifierRepositoryTest - No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-04-15 09:16:49,498 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-15 09:16:49,589 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 10 JPA repository interfaces.
+2023-04-15 09:16:49,631 [Test worker] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2023-04-15 09:16:49,768 [Test worker] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:d0cd37d9-6dc5-4e82-aabb-783d5b956607;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-04-15 09:16:50,055 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-15 09:16:50,094 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-04-15 09:16:50,220 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-15 09:16:50,316 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-15 09:16:50,812 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-15 09:16:50,818 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-15 09:16:51,389 [Test worker] INFO  l.j.t.i.c.r.ClassifierRepositoryTest - Started ClassifierRepositoryTest in 2.426 seconds (JVM running for 3.735)
+2023-04-15 09:16:51,417 [Test worker] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@3c1df0e9 testClass = ClassifierRepositoryTest, testInstance = lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest@4b7a4c83, testMethod = shouldNotFindFakeClassifier@ClassifierRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@768e40af testClass = ClassifierRepositoryTest, locations = '{}', classes = '{class lv.javaguru.travel.insurance.InsuranceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@224b4d61, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1d9bec4d, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@a0610b91, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@32232e55, [ImportsContextCustomizer@165824f5 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ea1bcdc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@53499d85, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@656c5818]; rollback [true]
+Hibernate: select classifier0_.id as id1_5_, classifier0_.description as descript2_5_, classifier0_.title as title3_5_ from classifiers classifier0_ where classifier0_.title=?
+2023-04-15 09:16:51,569 [Test worker] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@3c1df0e9 testClass = ClassifierRepositoryTest, testInstance = lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest@4b7a4c83, testMethod = shouldNotFindFakeClassifier@ClassifierRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@768e40af testClass = ClassifierRepositoryTest, locations = '{}', classes = '{class lv.javaguru.travel.insurance.InsuranceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@224b4d61, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1d9bec4d, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@a0610b91, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@32232e55, [ImportsContextCustomizer@165824f5 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ea1bcdc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@53499d85, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2023-04-15 09:16:51,575 [Test worker] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@3c1df0e9 testClass = ClassifierRepositoryTest, testInstance = lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest@7d4e424e, testMethod = shouldFindRiskTypeClassifier@ClassifierRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@768e40af testClass = ClassifierRepositoryTest, locations = '{}', classes = '{class lv.javaguru.travel.insurance.InsuranceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@224b4d61, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1d9bec4d, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@a0610b91, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@32232e55, [ImportsContextCustomizer@165824f5 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ea1bcdc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@53499d85, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@656c5818]; rollback [true]
+Hibernate: select classifier0_.id as id1_5_, classifier0_.description as descript2_5_, classifier0_.title as title3_5_ from classifiers classifier0_ where classifier0_.title=?
+2023-04-15 09:16:51,588 [Test worker] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@3c1df0e9 testClass = ClassifierRepositoryTest, testInstance = lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest@7d4e424e, testMethod = shouldFindRiskTypeClassifier@ClassifierRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@768e40af testClass = ClassifierRepositoryTest, locations = '{}', classes = '{class lv.javaguru.travel.insurance.InsuranceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@224b4d61, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1d9bec4d, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@a0610b91, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@32232e55, [ImportsContextCustomizer@165824f5 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ea1bcdc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@53499d85, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2023-04-15 09:16:51,590 [Test worker] INFO  o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@3c1df0e9 testClass = ClassifierRepositoryTest, testInstance = lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest@37a939bc, testMethod = injectedRepositoryAreNotNull@ClassifierRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@768e40af testClass = ClassifierRepositoryTest, locations = '{}', classes = '{class lv.javaguru.travel.insurance.InsuranceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@224b4d61, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1d9bec4d, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@a0610b91, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@32232e55, [ImportsContextCustomizer@165824f5 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ea1bcdc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@53499d85, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@656c5818]; rollback [true]
+2023-04-15 09:16:51,593 [Test worker] INFO  o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@3c1df0e9 testClass = ClassifierRepositoryTest, testInstance = lv.javaguru.travel.insurance.core.repositories.ClassifierRepositoryTest@37a939bc, testMethod = injectedRepositoryAreNotNull@ClassifierRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@768e40af testClass = ClassifierRepositoryTest, locations = '{}', classes = '{class lv.javaguru.travel.insurance.InsuranceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@224b4d61, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1d9bec4d, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@a0610b91, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@32232e55, [ImportsContextCustomizer@165824f5 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ea1bcdc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@53499d85, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Apr 15, 2023, 9:16:55 AM</p>
+</div>
+</div>
+</body>
+</html>

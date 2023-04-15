@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lv.javaguru.travel.insurance.core.validations.agreement.DateFromLessThenDateToValidationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-04-15T06:16:52" hostname="VSAVONINS" time="0.005">
+  <properties/>
+  <testcase name="shouldNotReturnErrorWhenDateFromIsLessDateTo()" classname="lv.javaguru.travel.insurance.core.validations.agreement.DateFromLessThenDateToValidationTest" time="0.002"/>
+  <testcase name="shouldReturnErrorWhenDateFromIsAfterDateTo()" classname="lv.javaguru.travel.insurance.core.validations.agreement.DateFromLessThenDateToValidationTest" time="0.001"/>
+  <testcase name="shouldReturnErrorWhenDateFromIsEqualsDateTo()" classname="lv.javaguru.travel.insurance.core.validations.agreement.DateFromLessThenDateToValidationTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

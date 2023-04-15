@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AgreementDateFromValidationIntegrationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AgreementDateFromValidationIntegrationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/lv.javaguru.travel.insurance.core.validations.integration.html">lv.javaguru.travel.insurance.core.validations.integration</a> &gt; AgreementDateFromValidationIntegrationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.040s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">shouldReturnErrorWhenDateFromIsInThePast()</td>
+<td class="success">0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnErrorWhenDateFromIsNull()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-04-15 09:16:52,148 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [lv.javaguru.travel.insurance.core.validations.integration.AgreementDateFromValidationIntegrationTest], using SpringBootContextLoader
+2023-04-15 09:16:52,149 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [lv.javaguru.travel.insurance.core.validations.integration.AgreementDateFromValidationIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-04-15 09:16:52,149 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [lv.javaguru.travel.insurance.core.validations.integration.AgreementDateFromValidationIntegrationTest]: AgreementDateFromValidationIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-15 09:16:52,158 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration lv.javaguru.travel.insurance.InsuranceApplication for test class lv.javaguru.travel.insurance.core.validations.integration.AgreementDateFromValidationIntegrationTest
+2023-04-15 09:16:52,163 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-04-15 09:16:52,164 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3bede349, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@501956f9, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@299c86f0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4fbed6fc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1b1d93e9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@129b0ed, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ccf1d3e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@75ff2b6d, org.springframework.test.context.event.EventPublishingTestExecutionListener@20a7ce0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4ee80a94, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7afac89a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76d220eb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@276eafad, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@29dcad7e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5ce1ec7]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.5)
+
+2023-04-15 09:16:52,192 [Test worker] INFO  l.j.t.i.c.v.i.AgreementDateFromValidationIntegrationTest - Starting AgreementDateFromValidationIntegrationTest using Java 18.0.2 on VSAVONINS with PID 16144 (started by admin in C:\javaguru\projects\qa-practice\version_1)
+2023-04-15 09:16:52,192 [Test worker] INFO  l.j.t.i.c.v.i.AgreementDateFromValidationIntegrationTest - No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-04-15 09:16:52,498 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-15 09:16:52,531 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 10 JPA repository interfaces.
+2023-04-15 09:16:52,681 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-15 09:16:52,698 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-15 09:16:52,758 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-15 09:16:52,765 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-15 09:16:52,829 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-15 09:16:52,829 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-15 09:16:53,256 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-15 09:16:54,182 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-04-15 09:16:54,183 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2023-04-15 09:16:54,184 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2023-04-15 09:16:54,194 [Test worker] INFO  l.j.t.i.c.v.i.AgreementDateFromValidationIntegrationTest - Started AgreementDateFromValidationIntegrationTest in 2.022 seconds (JVM running for 6.539)
+Hibernate: select classifier0_.id as id1_4_, classifier0_.classifier_id as classifi4_4_, classifier0_.description as descript2_4_, classifier0_.ic as ic3_4_ from classifier_values classifier0_ left outer join classifiers classifier1_ on classifier0_.classifier_id=classifier1_.id where classifier1_.title=? and classifier0_.ic=?
+Hibernate: select classifier0_.id as id1_5_0_, classifier0_.description as descript2_5_0_, classifier0_.title as title3_5_0_ from classifiers classifier0_ where classifier0_.id=?
+Hibernate: select classifier0_.id as id1_4_, classifier0_.classifier_id as classifi4_4_, classifier0_.description as descript2_4_, classifier0_.ic as ic3_4_ from classifier_values classifier0_ left outer join classifiers classifier1_ on classifier0_.classifier_id=classifier1_.id where classifier1_.title=? and classifier0_.ic=?
+Hibernate: select classifier0_.id as id1_5_0_, classifier0_.description as descript2_5_0_, classifier0_.title as title3_5_0_ from classifiers classifier0_ where classifier0_.id=?
+Hibernate: select classifier0_.id as id1_4_, classifier0_.classifier_id as classifi4_4_, classifier0_.description as descript2_4_, classifier0_.ic as ic3_4_ from classifier_values classifier0_ left outer join classifiers classifier1_ on classifier0_.classifier_id=classifier1_.id where classifier1_.title=? and classifier0_.ic=?
+Hibernate: select classifier0_.id as id1_5_0_, classifier0_.description as descript2_5_0_, classifier0_.title as title3_5_0_ from classifiers classifier0_ where classifier0_.id=?
+Hibernate: select classifier0_.id as id1_4_, classifier0_.classifier_id as classifi4_4_, classifier0_.description as descript2_4_, classifier0_.ic as ic3_4_ from classifier_values classifier0_ left outer join classifiers classifier1_ on classifier0_.classifier_id=classifier1_.id where classifier1_.title=? and classifier0_.ic=?
+Hibernate: select classifier0_.id as id1_5_0_, classifier0_.description as descript2_5_0_, classifier0_.title as title3_5_0_ from classifiers classifier0_ where classifier0_.id=?
+Hibernate: select classifier0_.id as id1_4_, classifier0_.classifier_id as classifi4_4_, classifier0_.description as descript2_4_, classifier0_.ic as ic3_4_ from classifier_values classifier0_ left outer join classifiers classifier1_ on classifier0_.classifier_id=classifier1_.id where classifier1_.title=? and classifier0_.ic=?
+Hibernate: select classifier0_.id as id1_5_0_, classifier0_.description as descript2_5_0_, classifier0_.title as title3_5_0_ from classifiers classifier0_ where classifier0_.id=?
+Hibernate: select classifier0_.id as id1_4_, classifier0_.classifier_id as classifi4_4_, classifier0_.description as descript2_4_, classifier0_.ic as ic3_4_ from classifier_values classifier0_ left outer join classifiers classifier1_ on classifier0_.classifier_id=classifier1_.id where classifier1_.title=? and classifier0_.ic=?
+Hibernate: select classifier0_.id as id1_5_0_, classifier0_.description as descript2_5_0_, classifier0_.title as title3_5_0_ from classifiers classifier0_ where classifier0_.id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Apr 15, 2023, 9:16:55 AM</p>
+</div>
+</div>
+</body>
+</html>

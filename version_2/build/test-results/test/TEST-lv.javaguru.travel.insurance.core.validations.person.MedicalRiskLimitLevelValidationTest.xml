@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lv.javaguru.travel.insurance.core.validations.person.MedicalRiskLimitLevelValidationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-04-15T06:16:54" hostname="VSAVONINS" time="0.005">
+  <properties/>
+  <testcase name="shouldNotReturnErrorWhenMedicalRiskLimitLevelExistInDb()" classname="lv.javaguru.travel.insurance.core.validations.person.MedicalRiskLimitLevelValidationTest" time="0.001"/>
+  <testcase name="shouldReturnError()" classname="lv.javaguru.travel.insurance.core.validations.person.MedicalRiskLimitLevelValidationTest" time="0.002"/>
+  <testcase name="shouldNotReturnErrorWhenMedicalRiskLimitLevelIsBlank()" classname="lv.javaguru.travel.insurance.core.validations.person.MedicalRiskLimitLevelValidationTest" time="0.001"/>
+  <testcase name="shouldNotReturnErrorWhenMedicalRiskLimitLevelIsNull()" classname="lv.javaguru.travel.insurance.core.validations.person.MedicalRiskLimitLevelValidationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

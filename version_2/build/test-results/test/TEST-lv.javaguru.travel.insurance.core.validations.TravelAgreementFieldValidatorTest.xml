@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lv.javaguru.travel.insurance.core.validations.TravelAgreementFieldValidatorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-04-15T06:16:52" hostname="VSAVONINS" time="0.009">
+  <properties/>
+  <testcase name="shouldReturnSingleAgreementErrors()" classname="lv.javaguru.travel.insurance.core.validations.TravelAgreementFieldValidatorTest" time="0.006"/>
+  <testcase name="shouldReturnListAgreementErrors()" classname="lv.javaguru.travel.insurance.core.validations.TravelAgreementFieldValidatorTest" time="0.002"/>
+  <testcase name="shouldNotReturnErrors()" classname="lv.javaguru.travel.insurance.core.validations.TravelAgreementFieldValidatorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
