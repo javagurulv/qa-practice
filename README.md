@@ -1,1 +1,1 @@
-![build](https://github.com/javagurulv/java2-real-practice-with-mentor/actions/workflows/build.yaml/badge.svg)
+![build](https://github.com/javagurulv/qa-practice/actions/workflows/build.yaml/badge.svg)
