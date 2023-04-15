@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="lv.javaguru.travel.insurance.core.underwriting.integration.MedicalRiskLimitLevelSwitchEnabledIntegrationTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2023-04-15T06:16:51" hostname="VSAVONINS" time="0.0">
-  <properties/>
-  <testcase name="shouldBeEnabledMedicalRiskLimitLevel()" classname="lv.javaguru.travel.insurance.core.underwriting.integration.MedicalRiskLimitLevelSwitchEnabledIntegrationTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
