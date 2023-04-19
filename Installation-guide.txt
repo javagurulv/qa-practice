@@ -1,0 +1,25 @@
+Installation and launch guide:
+
+Step 1: Create empty folder on your Desktop (TravelCalculator).
+
+Step 2: Create subfolder TravelCalculator/soft.
+Step 3: Create subfolder TravelCalculator/soft/JDK.
+Step 4: Create subfolder TravelCalculator/program.
+
+Step 5: Download JDK version 20.x (20.0/20.1/etc.) to TravelCalculator/soft:
+https://www.oracle.com/java/technologies/javase/jdk20-archive-downloads.html
+for windows: Windows x64 Installer
+
+
+Step 6: Install downloaded JDK 20.x on your computer to TravelCalculator/soft/JDK.
+
+
+Step 7: Download application JAR file (insurance-calculator-1.0.jar)
+and store it in TravelCalculator/program on Desktop.
+
+
+Step 8: Launch app
+Open Command Prompt (Start -> and search for Command Prompt)
+
+Copy to console this command and press enter:
+C:\Users\your_user_name\Desktop\TravelCalculator\soft\JDK\bin\java -jar C:\Users\your_user_name\Desktop\TravelCalculator\program\insurance-calculator-1.0.jar
