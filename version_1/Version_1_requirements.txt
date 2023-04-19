@@ -138,10 +138,40 @@ Gradle JVM: Project SDK (corretto-18)
 
 
 22. Баги в первой версии:
+
+
+Bug 1:
 InsuranceLimitCoefficient - не работает (он выключен и всегда 1)
 medical.risk.limit.level.enabled=false
 
-Если надо можно вырубить AgeCoefficient тоже через конфиг:
-medical.risk.age.coefficient.enabled=true
+
+Bug 2:
+Person Birth Date - можно указывать в будущем (нет проверки на то, что
+день рождение персоны должно быть в прошлом).
+
+Если указываешь Person Birth Date в пределах одного года вперёд,
+то приложение не будет выдавать ошибку и будет считать, что человеку
+0 лет, а если Person Birth Date будет указано на > 1 года вперёд, то
+приложение будет падать с ошибкой, которая в логах будет видна как:
+
+java.lang.RuntimeException: Age coefficient not found for age = -2
+	at lv.javaguru.travel.insurance.core.underwriting.calculators.medical.AgeCoefficientCalculator
+
+Тут можно рассказать как смотреть логи приложения и как от туда
+доставать ошибки и включать их в описание багов.
 
 
+Bug 3:
+Нет проверки на то, что Agreement Date From должен быть меньше
+Agreement Date To. Если Agreement Date From > Agreement Date To
+то premium будет отрицательной!
+
+
+Bug 4:
+AGREMENT PREMIUM: 7.70 - при выводе ответа в слове AGREEMENT
+допущена ошибка.
+
+
+Bug 5:
+Person Last Name - нет проверки на то, что это поле не должно
+быть пустым.

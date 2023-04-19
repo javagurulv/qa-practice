@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.Optional;
 
-@Component
+//@Component
 class DateFromLessThenDateToValidation extends TravelAgreementFieldValidationImpl {
 
     @Autowired private ValidationErrorFactory errorFactory;

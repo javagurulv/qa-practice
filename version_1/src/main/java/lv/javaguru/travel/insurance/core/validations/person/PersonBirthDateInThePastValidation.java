@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.Optional;
 
-@Component
+//@Component
 class PersonBirthDateInThePastValidation extends TravelPersonFieldValidationImpl {
 
     @Autowired private DateTimeUtil dateTimeUtil;
