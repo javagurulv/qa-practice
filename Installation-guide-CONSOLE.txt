@@ -1,4 +1,4 @@
-Installation and launch guide:
+Installation and launch guide (without IDEA):
 
 Step 1: Create empty folder on your Desktop (TravelCalculator).
 
