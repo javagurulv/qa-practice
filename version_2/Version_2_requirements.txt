@@ -137,9 +137,13 @@ Gradle JVM: Project SDK (corretto-18)
 
 
 
-22. Баги исправленные во второй версии:
-InsuranceLimitCoefficient - не работает (он выключен и всегда 1)
-medical.risk.limit.level.enabled=true
+22. Все баги из первой версии исправлены.
 
-....
+Добавлен новый баг:
+AgeCoefficient - не работает (он выключен и всегда 1)
+medical.risk.age.coefficient.enabled=false
 
+
+Добавлен новый баг:
+Если DayCount > 30 то DayCount = 30. Цена полиса не считается больше
+чем на месяц.

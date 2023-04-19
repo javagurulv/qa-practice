@@ -14,6 +14,11 @@ class DayCountCalculator {
 
     BigDecimal calculate(AgreementDTO agreement) {
         var daysBetween = dateTimeUtil.getDaysBetween(agreement.getAgreementDateFrom(), agreement.getAgreementDateTo());
+
+        if (daysBetween > 30) {
+            daysBetween = 30;
+        }
+
         return new BigDecimal(daysBetween);
     }
 
