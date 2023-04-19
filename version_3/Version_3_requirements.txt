@@ -7,6 +7,7 @@ Travel Policy Calculator version 3 requirements.
 4. Формула расчета премии для медицинского риска для каждой персоны:
 Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
 
+Общая стоимость полиса = сумме премий для всех персон.
 
 CountryDefaultDayPremium - дневная премия в стране посещения,
 в системе должна быть реализована возможность для бизнеса
@@ -146,7 +147,7 @@ http://localhost:8080/swagger-ui/index.html
 
 17. Запуск приложения (вариант 2) из консоли при установленной
 на компе JDK 18:
-java -jar insurance-calculator-1.0.2.jar
+java -jar insurance-calculator-3.0.jar
 
 
 18. Линк на GitHub repo:
@@ -169,5 +170,7 @@ Gradle JVM: Project SDK (corretto-18)
 
 
 22. Баги в третьей версии:
-...
+
+Премии считаются только для первых двух персон в полисе.
+Если добавляешь более двух персон, то для них премии не считаются.
 
