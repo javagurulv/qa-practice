@@ -1,0 +1,91 @@
+Title: Travel Policy Calculator for Single Person with Medical Risk Coverage
+
+As a customer,
+I want to be able to calculate the insurance premium for a travel policy that covers medical risk,
+So that I can get a policy tailored to my specific needs based on my age, the country I am visiting, and the desired insurance limit.
+
+Acceptance Criteria:
+
+1. The system should allow the user to input the following mandatory information:
+   - First name
+   - Last name
+   - Personal identification code
+   - Birthdate
+   - Agreement start and end dates
+   - Country of visit (Spain, Japan, Latvia)
+   - Medical risk limit level (LEVEL_10000, LEVEL_15000, LEVEL_20000, LEVEL_50000)
+   - Selected risks (TRAVEL_MEDICAL)
+
+2. The system should calculate the insurance premium based on the following formula:
+   Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+
+3. The system should store and retrieve CountryDefaultDayPremium values from the country_default_day_rate database table.
+
+4. The system should store and retrieve AgeCoefficient values from the age_coefficient database table, based on the user's birthdate.
+
+5. The system should store and retrieve InsuranceLimitCoefficient values from the medical_risk_limit_level database table, based on the selected Medical Risk Limit Level.
+
+6. The system should validate that all input fields are filled in and return an error message if any field is left empty.
+
+7. The system should validate that the user's birthdate is in the past and return an error message if the birthdate is in the future.
+
+8. The system should validate that the agreement start date is earlier than the end date and return an error message if this condition is not met.
+
+9. The system should provide a REST API for submitting the request and receiving the calculated premium in the response.
+
+10. The system should provide a web interface for user input and displaying the calculated premium.
+
+Out of Scope:
+- Non-medical risks
+- Policies for multiple persons or groups
+- Countries other than Spain, Japan, and Latvia
+11. The system should provide detailed error messages when validation fails for any input field or when there is an issue with the premium calculation.
+
+12. The system should display the calculated premium with a clear breakdown of the components (CountryDefaultDayPremium, DayCount, AgeCoefficient, InsuranceLimitCoefficient) used in the calculation.
+
+13. The system should be accessible through a web application at http://localhost:8080/insurance/travel/web/v1 and a REST API at http://localhost:8080/insurance/travel/api/v1.
+
+14. The system should provide Swagger UI documentation for the REST API at http://localhost:8080/swagger-ui/index.html, allowing users to make API requests without using external tools like Postman.
+
+15. The system should include a database connection for debugging purposes, accessible at http://localhost:8080/h2-console with the following credentials:
+    - User name: sa
+    - Password:
+    - Driver Class: org.h2.Driver
+    - JDBC URL: jdbc:h2:mem:testdb
+
+16. The application should be easy to launch, either from an IDE like IntelliJ IDEA or from the command line using JDK 18.
+
+17. The source code should be version-controlled and hosted on a GitHub repository, available for developers to clone and contribute to the project.
+
+18. The system should be easy to configure and set up for development, with clear instructions and compatible settings for IntelliJ IDEA Community Edition and Gradle.
+
+19. The system should be tested thoroughly for bugs and issues, with known bugs documented and fixed in subsequent versions.
+
+20. The system should be designed for extensibility, allowing for future enhancements such as additional countries, insurance limits, and risk types.
+
+21. The system should be scalable and performant, handling a large number of concurrent users and requests without significant degradation in performance or user experience.
+22. The system should provide a user-friendly interface, allowing users to input their information quickly and efficiently, with tooltips or help text for fields that might be unclear.
+
+23. The system should have a visually appealing design, adhering to modern UI/UX principles to provide a professional and easy-to-use experience.
+
+24. The system should be responsive and compatible with multiple devices, including desktops, laptops, tablets, and mobile phones, ensuring a consistent experience for users across various platforms.
+
+25. The system should have appropriate error handling and fallback mechanisms in place to ensure smooth operation even in case of unexpected issues or external dependencies' failures.
+
+26. The system should be designed with security in mind, ensuring that user data is protected and that access to sensitive data is restricted to authorized users only.
+
+27. The system should include proper logging and monitoring capabilities, enabling developers and administrators to track usage, performance, and potential issues in real-time.
+
+28. The system should be well-documented, including in-code comments, API documentation, and end-user instructions, making it easy for developers, administrators, and users to understand and use the application effectively.
+
+29. The system should include a comprehensive test suite, covering unit tests, integration tests, and end-to-end tests, ensuring the application's stability and correctness during development and deployment.
+
+30. The development process should follow industry best practices, including version control, code reviews, continuous integration, and deployment, ensuring a high-quality and maintainable codebase.
+
+31. The system should provide a mechanism for user feedback and issue reporting, allowing users to report problems or request enhancements, helping to drive continuous improvement of the application.
+
+32. The development team should be prepared to provide ongoing support and maintenance for the application, addressing reported issues and implementing new features and enhancements as needed to meet user needs and expectations.
+
+33. The system should be flexible and adaptable, allowing for easy integration with third-party services, data sources, or other external systems as needed to support new features and functionality.
+
+34. The system should be designed with internationalization and localization in mind, enabling support for additional languages and regional settings as needed to expand the user base and support global customers.
