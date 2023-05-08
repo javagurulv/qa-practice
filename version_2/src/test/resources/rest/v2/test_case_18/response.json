@@ -1,13 +1,18 @@
 {
   "errors": [
     {
-      "errorCode": "ERROR_CODE_5",
-      "description": "Field agreementDateFrom must be less than agreementDateTo!"
+      "errorCode": "ERROR_CODE_10",
+      "description": "Field country must not be empty!"
     }
   ],
+  "personFirstName": null,
+  "personLastName": null,
+  "personCode": null,
+  "personBirthDate": null,
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "country": null,
+  "medicalRiskLimitLevel" : null,
   "agreementPremium": null,
-  "persons": null
+  "risks": null
 }

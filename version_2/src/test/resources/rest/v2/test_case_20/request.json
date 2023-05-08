@@ -1,22 +1,11 @@
 {
-  "agreementDateFrom" : "2050-05-29",
-  "agreementDateTo" : "2060-05-29",
-  "country" : "SPAIN",
-  "selected_risks" : [],
-  "persons" : [
-    {
-      "personFirstName" : "Vasja",
-      "personLastName" : "Pupkin",
-      "personCode" : "123456-12345",
-      "personBirthDate" : "2010-05-29",
-      "medicalRiskLimitLevel" : "LEVEL_10000"
-    },
-    {
-      "personFirstName" : "Petja",
-      "personLastName" : "Pupkin",
-      "personCode" : "123456-12345",
-      "personBirthDate" : "2010-02-29",
-      "medicalRiskLimitLevel" : "LEVEL_10000"
-    }
-  ]
+  "personFirstName" : null,
+  "personLastName" : null,
+  "personCode" : null,
+  "personBirthDate" : null,
+  "agreementDateFrom" : null,
+  "agreementDateTo" : null,
+  "country" : null,
+  "medicalRiskLimitLevel" : null,
+  "selected_risks" : null
 }

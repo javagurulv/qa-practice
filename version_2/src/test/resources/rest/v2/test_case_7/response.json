@@ -1,13 +1,18 @@
 {
   "errors": [
     {
-      "errorCode": "ERROR_CODE_8",
-      "description": "Field personLastName must not be empty!"
+      "errorCode": "ERROR_CODE_12",
+      "description": "Field personBirthDate must be in the past!"
     }
   ],
+  "personFirstName": null,
+  "personLastName": null,
+  "personCode": null,
+  "personBirthDate": null,
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "country": null,
+  "medicalRiskLimitLevel" : null,
   "agreementPremium": null,
-  "persons": null
+  "risks": null
 }
