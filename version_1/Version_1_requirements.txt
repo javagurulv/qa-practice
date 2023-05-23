@@ -115,7 +115,7 @@ http://localhost:8080/swagger-ui/index.html
 
 17. Запуск приложения (вариант 2) из консоли при установленной
 на компе JDK 18:
-java -jar insurance-calculator-1.0.2.jar
+java -jar insurance-calculator-1.0.jar
 
 
 18. Линк на GitHub repo:
