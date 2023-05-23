@@ -1,4 +1,4 @@
-package lv.javaguru.travel.insurance.v3.dto.v2;
+package lv.javaguru.travel.insurance.v3.dto.v3;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -19,7 +19,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TravelCalculatePremiumResponseV2 extends CoreResponse {
+public class TravelCalculatePremiumResponseV3 extends CoreResponse {
 
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date agreementDateFrom;
@@ -35,7 +35,7 @@ public class TravelCalculatePremiumResponseV2 extends CoreResponse {
     @JsonAlias("persons")
     private List<PersonResponseDTO> persons;
 
-    public TravelCalculatePremiumResponseV2(List<ValidationError> errors) {
+    public TravelCalculatePremiumResponseV3(List<ValidationError> errors) {
         super(errors);
     }
 

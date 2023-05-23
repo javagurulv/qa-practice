@@ -1,4 +1,4 @@
-package lv.javaguru.travel.insurance.v3.dto.v2;
+package lv.javaguru.travel.insurance.v3.dto.v3;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -15,7 +15,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TravelCalculatePremiumRequestV2 {
+public class TravelCalculatePremiumRequestV3 {
 
     @JsonFormat(pattern="yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd")

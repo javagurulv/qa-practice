@@ -1,13 +1,17 @@
-package lv.javaguru.travel.insurance.v3.dto.v1;
+package lv.javaguru.travel.insurance.v3.dto.v3;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lv.javaguru.travel.insurance.v3.dto.RiskPremium;
+import lv.javaguru.travel.insurance.v3.dto.util.BigDecimalSerializer;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -15,30 +19,21 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TravelCalculatePremiumRequestV1 {
+public class PersonResponseDTO {
 
     private String personFirstName;
     private String personLastName;
-
     private String personCode;
-
     @JsonFormat(pattern="yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date personBirthDate;
 
-    @JsonFormat(pattern="yyyy-MM-dd")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date agreementDateFrom;
-
-    @JsonFormat(pattern="yyyy-MM-dd")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date agreementDateTo;
-
-    private String country;
-
     private String medicalRiskLimitLevel;
 
-    @JsonAlias("selected_risks")
-    private List<String> selectedRisks;
+    @JsonSerialize(using = BigDecimalSerializer.class)
+    private BigDecimal personPremium;
+
+    @JsonAlias("person_risks")
+    private List<RiskPremium> personRisks;
 
 }
