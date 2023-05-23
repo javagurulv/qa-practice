@@ -17,6 +17,15 @@ import java.util.List;
 @AllArgsConstructor
 public class TravelCalculatePremiumRequestV2 {
 
+    private String personFirstName;
+    private String personLastName;
+
+    private String personCode;
+
+    @JsonFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date personBirthDate;
+
     @JsonFormat(pattern="yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date agreementDateFrom;
@@ -27,10 +36,9 @@ public class TravelCalculatePremiumRequestV2 {
 
     private String country;
 
+    private String medicalRiskLimitLevel;
+
     @JsonAlias("selected_risks")
     private List<String> selectedRisks;
-
-    @JsonAlias("persons")
-    private List<PersonRequestDTO> persons;
 
 }
