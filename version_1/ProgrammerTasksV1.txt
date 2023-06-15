@@ -212,7 +212,22 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 8: Develop code to round calculated premium to XX.YY format
+Task 8: Develop code to calculate Medical risk premium formula
+
+Common task description:
+Medical risk premium calculation formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+
+Task details:
+Develop code to calculate premium for medical rusk
+according the formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+
+Task status: DONE (by programmer)
+
+=========================================================
+
+Task 9: Develop code to round calculated premium to XX.YY format
 
 Common task description:
 Medical risk premium must have two numbers after "." (XX.YY format).
@@ -225,7 +240,7 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 9: Multi person medical risk insurance calculation
+Task 10: Multi person medical risk insurance calculation
 
 Common task description:
 Develop possibility to include multiple persons to
@@ -235,7 +250,7 @@ Task status: TO-DO (backlog) (for programmer)
 
 =========================================================
 
-Task 10: Develop REST API for multi person medical
+Task 11: Develop REST API for multi person medical
 risk insurance calculation
 
 Common task description:
@@ -243,4 +258,3 @@ Develop possibility to invoke policy premium calculation
 using REST API.
 
 Task status: IN PROGRESS (for programmer)
-
