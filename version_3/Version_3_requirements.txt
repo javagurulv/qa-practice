@@ -65,12 +65,10 @@ JDBC URL: jdbc:h2:mem:testdb
 
 
 12. Линк для доступа к web части:
-http://localhost:8080/insurance/travel/web/v1
-http://localhost:8080/insurance/travel/web/v2
+http://localhost:8080/insurance/travel/web/v3
 
 Линк для REST (HTTP POST, Content-Type: application/json):
-http://localhost:8080/insurance/travel/api/v1
-http://localhost:8080/insurance/travel/api/v2
+http://localhost:8080/insurance/travel/api/v3
 
 
 13. Линк для Swagger UI (через него можно делать REST запросы
@@ -78,7 +76,7 @@ http://localhost:8080/insurance/travel/api/v2
 http://localhost:8080/swagger-ui/index.html
 
 
-14. Correct REST request v2:
+14. Correct REST request v3:
 {
   "agreementDateFrom" : "2025-05-25",
   "agreementDateTo" : "2025-05-29",
@@ -103,7 +101,7 @@ http://localhost:8080/swagger-ui/index.html
 }
 
 
-15. Correct REST response v2:
+15. Correct REST response v3:
 {
   "errors": null,
   "agreementDateFrom": "2025-05-25",
