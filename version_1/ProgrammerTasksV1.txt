@@ -3,7 +3,7 @@ Task 1: UI Development
 Common task description:
 Create web UI page for Travel Insurance Calculator.
 This page must contain all necessary functionality to enter
-all insurance policy parameters, invoke policy premium
+all insurance policy parameters for one person, invoke policy premium
 calculation functionality and check the results.
 
 Task details:
