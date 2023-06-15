@@ -242,5 +242,5 @@ Common task description:
 Develop possibility to invoke policy premium calculation
 using REST API.
 
-Task status: TO-DO (backlog) (for programmer)
+Task status: IN PROGRESS (for programmer)
 
