@@ -1,35 +1,47 @@
-Task 1: UI Development
+Task 1: UI Development (Agreement level)
 
 Common task description:
 Create web UI page for Travel Insurance Calculator.
 This page must contain all necessary functionality to enter
-all insurance policy parameters for multiple persons,
-invoke policy premium calculation functionality and check the results.
+agreement level policy parameters.
 
 Task details:
 
-Input fields:
-- First Name: text
-- Last Name: text
-- Person Code: text
-- Birth Date: date (format: dd/mm/yyyy)
+Agreement level input fields:
 - Agreement Date From: date (format: dd/mm/yyyy)
 - Agreement Date To: date (format: dd/mm/yyyy)
 - Country: text
-- Medical Risk Limit Level: text
 - Selected Risks: text
 
-Button: Calculate
-
-Result should contain:
-AGREEMENT PREMIUM: 35.75 (calculated policy premium)
-
+Buttons:
+- Add Person
+- Remove Person
+- Calculate Premium
 
 Task status: DONE (by programmer)
 
 =========================================================
 
-Task 2: UI Error handling
+Task 2: UI Development (Person level)
+
+Common task description:
+On web UI page for Travel Insurance Calculator
+add possibility to enter person related information.
+
+Task details:
+
+Person level input fields:
+- First Name: text
+- Last Name: text
+- Person Code: text
+- Birth Date: date (format: dd/mm/yyyy)
+- Medical Risk Limit Level: text
+
+Task status: DONE (by programmer)
+
+=========================================================
+
+Task 3: UI Error handling
 
 Common task description:
 Create possibility to show on web page validation errors
@@ -46,11 +58,12 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 3: Validate calculation input
+Task 4: Validate calculation input
 
 Common task description:
 On a backend develop code to validate agreement premium
-calculation parameters. Return errors if they occur.
+calculation parameters (on agreement and person levels).
+Return errors if they occur.
 
 Task details:
 
@@ -78,13 +91,13 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 4: Develop code to calculate CountryDefaultDayPremium
+Task 5: Develop code to calculate CountryDefaultDayPremium
 
 Common task description:
-Medical risk premium calculation formula:
+Medical risk premium calculation formula for one person:
 Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
 Develop code to and related database structures to provide
-CountryDefaultDayPremium calculation from formula above.
+CountryDefaultDayPremium calculation from formula above for one person.
 
 Task details:
 Create database table country_default_day_rate with two
@@ -120,10 +133,10 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 5: Develop code to calculate DayCount
+Task 6: Develop code to calculate DayCount
 
 Common task description:
-Medical risk premium calculation formula:
+Medical risk premium calculation formula for one person:
 Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
 Develop code to provide DayCount calculation from formula above.
 
@@ -136,10 +149,10 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 6: Develop code to calculate AgeCoefficient
+Task 7: Develop code to calculate AgeCoefficient
 
 Common task description:
-Medical risk premium calculation formula:
+Medical risk premium calculation formula for one person:
 Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
 Develop code to and related database structures to provide
 AgeCoefficient calculation from formula above.
@@ -165,10 +178,10 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 7: Develop code to calculate InsuranceLimitCoefficient
+Task 8: Develop code to calculate InsuranceLimitCoefficient
 
 Common task description:
-Medical risk premium calculation formula:
+Medical risk premium calculation formula for one person:
 Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
 Develop code to and related database structures to provide
 InsuranceLimitCoefficient calculation from formula above.
@@ -212,13 +225,37 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 8: Develop code to round calculated premium to XX.YY format
+Task 9: Develop code to calculate agreement total premium
 
 Common task description:
-Medical risk premium must have two numbers after "." (XX.YY format).
+Agreement total premium = Sum of each person premiums for all supported
+risks (currently application support only medical risk).
+
+Task details:
+Develop code to calculate agreement total premium.
+
+Task status: DONE (by programmer)
+
+=========================================================
+
+Task 10: Develop code to round agreement premium to XX.YY format
+
+Common task description:
+Agreement premium must have two numbers after "." (XX.YY format).
 
 Task details:
 Create the code to correctly round calculated premium
 using XX.YY format.
 
 Task status: DONE (by programmer)
+
+=========================================================
+
+Task 11: Develop REST API for multi person insurance calculator version
+
+Common task description:
+Develop REST API to calculating insurance premium
+for multi person version.
+
+Task status: DONE (by programmer)
+
