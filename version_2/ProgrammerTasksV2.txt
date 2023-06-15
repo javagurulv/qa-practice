@@ -209,10 +209,24 @@ LEVEL_50000	                    2.00
 
 Task status: DONE (by programmer)
 
+=========================================================
+
+Task 8: Develop code to calculate Medical risk premium formula
+
+Common task description:
+Medical risk premium calculation formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+
+Task details:
+Develop code to calculate premium for medical rusk
+according the formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+
+Task status: DONE (by programmer)
 
 =========================================================
 
-Task 8: Develop code to round calculated premium to XX.YY format
+Task 9: Develop code to round calculated premium to XX.YY format
 
 Common task description:
 Medical risk premium must have two numbers after "." (XX.YY format).
@@ -225,7 +239,7 @@ Task status: DONE (by programmer)
 
 =========================================================
 
-Task 9: Multi person medical risk insurance calculation
+Task 10: Multi person medical risk insurance calculation
 
 Common task description:
 Develop possibility to include multiple persons to
@@ -235,7 +249,7 @@ Task status: IN PROGRESS (for programmer)
 
 =========================================================
 
-Task 10: Develop REST API for multi person medical
+Task 11: Develop REST API for multi person medical
 risk insurance calculation
 
 Common task description:
@@ -245,10 +259,9 @@ using REST API.
 Task status: IN PROGRESS (for programmer)
 
 
-
 =========================================================
 
-Task 11 (BUG): InsuranceLimitCoefficient - not working, always = 1
+Task 12 (BUG): InsuranceLimitCoefficient - not working, always = 1
 
 Common task description:
 InsuranceLimitCoefficient - not working, always = 1
@@ -258,7 +271,7 @@ Task status: DONE (fixed by programmer)
 
 =========================================================
 
-Task 12 (BUG): Person Birth Date can be in the future
+Task 13 (BUG): Person Birth Date can be in the future
 
 Common task description:
 Person Birth Date can be in the future
@@ -268,7 +281,7 @@ Task status: DONE (fixed by programmer)
 
 =========================================================
 
-Task 13 (BUG): Agreement Date From must be < Agreement Date To
+Task 14 (BUG): Agreement Date From must be < Agreement Date To
 
 Common task description:
 Agreement Date From must be < Agreement Date To
@@ -278,7 +291,7 @@ Task status: DONE (fixed by programmer)
 
 =========================================================
 
-Task 14 (BUG): AGREMENT PREMIUM: 7.70 - UI grammar mistake
+Task 15 (BUG): AGREMENT PREMIUM: 7.70 - UI grammar mistake
 
 Common task description:
 AGREMENT PREMIUM: 7.70 - UI grammar mistake.
@@ -288,7 +301,7 @@ Task status: DONE (fixed by programmer)
 
 =========================================================
 
-Task 15 (BUG): Person Last Name can be empty (validation not working)
+Task 16 (BUG): Person Last Name can be empty (validation not working)
 
 Common task description:
 Person Last Name can be empty (validation not working),
