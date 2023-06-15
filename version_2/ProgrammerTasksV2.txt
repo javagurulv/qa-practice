@@ -222,3 +222,76 @@ Create the code to correctly round calculated premium
 using XX.YY format.
 
 Task status: DONE (by programmer)
+
+=========================================================
+
+Task 9: Multi person medical risk insurance calculation
+
+Common task description:
+Develop possibility to include multiple persons to
+policy premium calculation.
+
+Task status: IN PROGRESS (for programmer)
+
+=========================================================
+
+Task 10: Develop REST API for multi person medical
+risk insurance calculation
+
+Common task description:
+Develop possibility to invoke policy premium calculation
+using REST API.
+
+Task status: IN PROGRESS (for programmer)
+
+
+
+=========================================================
+
+Task 11 (BUG): InsuranceLimitCoefficient - not working, always = 1
+
+Common task description:
+InsuranceLimitCoefficient - not working, always = 1
+
+Task status: DONE (fixed by programmer)
+
+
+=========================================================
+
+Task 12 (BUG): Person Birth Date can be in the future
+
+Common task description:
+Person Birth Date can be in the future
+
+Task status: DONE (fixed by programmer)
+
+
+=========================================================
+
+Task 13 (BUG): Agreement Date From must be < Agreement Date To
+
+Common task description:
+Agreement Date From must be < Agreement Date To
+
+Task status: DONE (fixed by programmer)
+
+
+=========================================================
+
+Task 14 (BUG): AGREMENT PREMIUM: 7.70 - UI grammar mistake
+
+Common task description:
+AGREMENT PREMIUM: 7.70 - UI grammar mistake.
+
+Task status: DONE (fixed by programmer)
+
+
+=========================================================
+
+Task 15 (BUG): Person Last Name can be empty (validation not working)
+
+Common task description:
+Person Last Name can be empty (validation not working),
+must be not empty.
+
+Task status: DONE (fixed by programmer)
