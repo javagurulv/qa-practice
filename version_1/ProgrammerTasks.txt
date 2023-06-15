@@ -208,3 +208,17 @@ LEVEL_50000	                    2.00
 
 
 Task status: DONE (by programmer)
+
+
+=========================================================
+
+Task 8: Develop code to round calculated premium to XX.YY format
+
+Common task description:
+Medical risk premium must have two numbers after "." (XX.YY format).
+
+Task details:
+Create the code to correctly round calculated premium
+using XX.YY format.
+
+Task status: DONE (by programmer)
