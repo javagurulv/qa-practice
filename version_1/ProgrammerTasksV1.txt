@@ -222,3 +222,14 @@ Create the code to correctly round calculated premium
 using XX.YY format.
 
 Task status: DONE (by programmer)
+
+=========================================================
+
+Task 9: Multi person medical risk insurance
+
+Common task description:
+Develop possibility to include multiple persons to
+policy premium calculation.
+
+Task status: TO-DO (backlog) (for programmer)
+
