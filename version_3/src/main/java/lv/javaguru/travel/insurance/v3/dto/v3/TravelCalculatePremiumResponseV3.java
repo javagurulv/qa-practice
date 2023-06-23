@@ -3,6 +3,7 @@ package lv.javaguru.travel.insurance.v3.dto.v3;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,9 +23,11 @@ import java.util.List;
 public class TravelCalculatePremiumResponseV3 extends CoreResponse {
 
     @JsonFormat(pattern="yyyy-MM-dd")
+    @Schema(type = "string", format = "date", pattern = "yyyy-MM-dd", example = "2021-01-23")
     private Date agreementDateFrom;
 
     @JsonFormat(pattern="yyyy-MM-dd")
+    @Schema(type = "string", format = "date", pattern = "yyyy-MM-dd", example = "2021-01-23")
     private Date agreementDateTo;
 
     private String country;
