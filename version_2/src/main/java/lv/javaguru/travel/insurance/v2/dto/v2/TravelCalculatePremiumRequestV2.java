@@ -2,6 +2,7 @@ package lv.javaguru.travel.insurance.v2.dto.v2;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,14 +25,17 @@ public class TravelCalculatePremiumRequestV2 {
 
     @JsonFormat(pattern="yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Schema(type = "string", format = "date", pattern = "yyyy-MM-dd", example = "2021-01-23")
     private Date personBirthDate;
 
     @JsonFormat(pattern="yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Schema(type = "string", format = "date", pattern = "yyyy-MM-dd", example = "2021-01-23")
     private Date agreementDateFrom;
 
     @JsonFormat(pattern="yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Schema(type = "string", format = "date", pattern = "yyyy-MM-dd", example = "2021-01-23")
     private Date agreementDateTo;
 
     private String country;
