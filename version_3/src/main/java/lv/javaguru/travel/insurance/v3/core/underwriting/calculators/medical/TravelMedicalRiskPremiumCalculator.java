@@ -19,10 +19,10 @@ class TravelMedicalRiskPremiumCalculator implements TravelRiskPremiumCalculator 
 
     @Override
     public BigDecimal calculatePremium(AgreementDTO agreement, PersonDTO person) {
-        var daysCount = dayCountCalculator.calculate(agreement);
-        var countryDefaultRate = countryDefaultDayRateCalculator.calculate(agreement);
-        var ageCoefficient = ageCoefficientCalculator.calculate(person);
-        var riskLimitLevel = riskLimitLevelCalculator.calculate(person);
+        BigDecimal daysCount = dayCountCalculator.calculate(agreement);
+        BigDecimal countryDefaultRate = countryDefaultDayRateCalculator.calculate(agreement);
+        BigDecimal ageCoefficient = ageCoefficientCalculator.calculate(person);
+        BigDecimal riskLimitLevel = riskLimitLevelCalculator.calculate(person);
         return countryDefaultRate
                 .multiply(daysCount)
                 .multiply(ageCoefficient)

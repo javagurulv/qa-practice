@@ -17,7 +17,7 @@ public class DateTimeUtilTest {
     public void shouldDaysBetweenBeZero() {
         Date date1 = createDate("01.01.2023");
         Date date2 = createDate("01.01.2023");
-        var daysBetween = dateTimeUtil.getDaysBetween(date1, date2);
+        long daysBetween = dateTimeUtil.getDaysBetween(date1, date2);
         assertEquals(daysBetween, 0L);
     }
 
@@ -25,7 +25,7 @@ public class DateTimeUtilTest {
     public void shouldDaysBetweenBePositive() {
         Date date1 = createDate("01.01.2023");
         Date date2 = createDate("10.01.2023");
-        var daysBetween = dateTimeUtil.getDaysBetween(date1, date2);
+        long daysBetween = dateTimeUtil.getDaysBetween(date1, date2);
         assertEquals(daysBetween, 9L);
     }
 
@@ -33,7 +33,7 @@ public class DateTimeUtilTest {
     public void shouldDaysBetweenBeNegative() {
         Date date1 = createDate("10.01.2023");
         Date date2 = createDate("01.01.2023");
-        var daysBetween = dateTimeUtil.getDaysBetween(date1, date2);
+        long daysBetween = dateTimeUtil.getDaysBetween(date1, date2);
         assertEquals(daysBetween, -9L);
     }
 

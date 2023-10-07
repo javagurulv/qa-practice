@@ -13,6 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,7 +35,9 @@ class SelectedRisksPremiumCalculatorTest {
     public void init() {
         riskPremiumCalculator1 = mock(TravelRiskPremiumCalculator.class);
         riskPremiumCalculator2 = mock(TravelRiskPremiumCalculator.class);
-        var riskPremiumCalculators = List.of(riskPremiumCalculator1, riskPremiumCalculator2);
+        List<TravelRiskPremiumCalculator> riskPremiumCalculators = new ArrayList<>();
+        riskPremiumCalculators.add(riskPremiumCalculator1);
+        riskPremiumCalculators.add(riskPremiumCalculator2);
         ReflectionTestUtils.setField(calculator, "riskPremiumCalculators", riskPremiumCalculators);
     }
 

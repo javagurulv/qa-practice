@@ -13,7 +13,7 @@ class DayCountCalculator {
     @Autowired private DateTimeUtil dateTimeUtil;
 
     BigDecimal calculate(AgreementDTO agreement) {
-        var daysBetween = dateTimeUtil.getDaysBetween(agreement.getAgreementDateFrom(), agreement.getAgreementDateTo());
+        Long daysBetween = dateTimeUtil.getDaysBetween(agreement.getAgreementDateFrom(), agreement.getAgreementDateTo());
         return new BigDecimal(daysBetween);
     }
 
