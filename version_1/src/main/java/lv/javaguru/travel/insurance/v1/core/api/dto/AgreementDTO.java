@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class AgreementDTO {
 
+    private Long agreementId;
     private Date agreementDateFrom;
 
     private Date agreementDateTo;

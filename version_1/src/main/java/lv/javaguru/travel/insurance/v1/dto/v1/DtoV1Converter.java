@@ -40,6 +40,7 @@ public class DtoV1Converter {
     private TravelCalculatePremiumResponseV1 buildSuccessfulResponse(TravelCalculatePremiumCoreResult coreResult) {
         AgreementDTO agreement = coreResult.getAgreement();
         TravelCalculatePremiumResponseV1 response = new TravelCalculatePremiumResponseV1();
+        response.setAgreementId(agreement.getAgreementId());
         response.setPersonFirstName(agreement.getPersons().get(0).getPersonFirstName());
         response.setPersonLastName(agreement.getPersons().get(0).getPersonLastName());
         response.setPersonCode(agreement.getPersons().get(0).getPersonCode());

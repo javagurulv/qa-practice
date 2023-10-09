@@ -23,6 +23,7 @@ import java.util.List;
 @AllArgsConstructor
 public class TravelCalculatePremiumResponseV1 extends CoreResponse {
 
+    private Long agreementId;
     private String personFirstName;
     private String personLastName;
     private String personCode;

@@ -6,6 +6,7 @@ import lv.javaguru.travel.insurance.v1.core.api.dto.AgreementDTO;
 import lv.javaguru.travel.insurance.v1.core.api.dto.PersonDTO;
 import lv.javaguru.travel.insurance.v1.core.api.dto.RiskDTO;
 import lv.javaguru.travel.insurance.v1.core.api.dto.ValidationErrorDTO;
+import lv.javaguru.travel.insurance.v1.core.domain.entities.AgreementEntity;
 import lv.javaguru.travel.insurance.v1.core.underwriting.TravelPremiumCalculationResult;
 import lv.javaguru.travel.insurance.v1.core.underwriting.TravelPremiumUnderwriting;
 import lv.javaguru.travel.insurance.v1.core.validations.TravelAgreementValidator;
@@ -43,7 +44,8 @@ class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService
         BigDecimal totalAgreementPremium = calculateTotalAgreementPremium(agreement);
         agreement.setAgreementPremium(totalAgreementPremium);
 
-        agreementEntityFactory.createAgreementEntity(agreement);
+        AgreementEntity agreementEntity = agreementEntityFactory.createAgreementEntity(agreement);
+        agreement.setAgreementId(agreementEntity.getId());
 
         TravelCalculatePremiumCoreResult coreResult = new TravelCalculatePremiumCoreResult();
         coreResult.setAgreement(agreement);
