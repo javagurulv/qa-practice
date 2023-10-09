@@ -11,6 +11,7 @@ import lv.javaguru.travel.insurance.v3.dto.ValidationError;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,14 +43,16 @@ public class DtoV3Converter {
     private TravelCalculatePremiumResponseV3 buildSuccessfulResponse(TravelCalculatePremiumCoreResult coreResult) {
         AgreementDTO agreement = coreResult.getAgreement();
         TravelCalculatePremiumResponseV3 response = new TravelCalculatePremiumResponseV3();
+        response.setAgreementId(agreement.getAgreementId());
         response.setAgreementDateFrom(agreement.getAgreementDateFrom());
         response.setAgreementDateTo(agreement.getAgreementDateTo());
         response.setCountry(agreement.getCountry());
         response.setAgreementPremium(agreement.getAgreementPremium());
 
-        List<PersonResponseDTO> personResponseDTOS = agreement.getPersons().stream()
+        List<PersonResponseDTO> personResponseDTOS = agreement.getPersons()
+                .stream()
                 .map(this::buildPersonFromResponse)
-                .toList();
+                .collect(Collectors.toList());
         response.setPersons(personResponseDTOS);
 
         return response;
@@ -99,7 +102,7 @@ public class DtoV3Converter {
 
     private List<PersonDTO> buildPersonDTOFromRequest(TravelCalculatePremiumRequestV3 request) {
         if (request.getPersons() == null) {
-            return List.of();
+            return new ArrayList<>();
         } else {
             return request.getPersons().stream()
                     .map(this::buildPersonFromRequest)

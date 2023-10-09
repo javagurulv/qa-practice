@@ -22,6 +22,8 @@ import java.util.List;
 @AllArgsConstructor
 public class TravelCalculatePremiumResponseV3 extends CoreResponse {
 
+    private Long agreementId;
+
     @JsonFormat(pattern="yyyy-MM-dd")
     @Schema(type = "string", format = "date", pattern = "yyyy-MM-dd", example = "2021-01-23")
     private Date agreementDateFrom;
