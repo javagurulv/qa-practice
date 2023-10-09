@@ -6,9 +6,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TravelCalculatePremiumRequestExecutionTimeLogger {
+public class RestRequestExecutionTimeLogger {
 
-    private static final Logger logger = LoggerFactory.getLogger(TravelCalculatePremiumRequestExecutionTimeLogger.class);
+    private static final Logger logger = LoggerFactory.getLogger(RestRequestExecutionTimeLogger.class);
 
     public void logExecutionTime(Stopwatch stopwatch) {
         stopwatch.stop();
