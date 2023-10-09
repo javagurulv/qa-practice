@@ -9,6 +9,7 @@ import lv.javaguru.travel.insurance.v2.dto.RiskPremium;
 import lv.javaguru.travel.insurance.v2.dto.ValidationError;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -40,6 +41,7 @@ public class DtoV2Converter {
     private TravelCalculatePremiumResponseV2 buildSuccessfulResponse(TravelCalculatePremiumCoreResult coreResult) {
         AgreementDTO agreement = coreResult.getAgreement();
         TravelCalculatePremiumResponseV2 response = new TravelCalculatePremiumResponseV2();
+        response.setAgreementId(agreement.getAgreementId());
         response.setPersonFirstName(agreement.getPersons().get(0).getPersonFirstName());
         response.setPersonLastName(agreement.getPersons().get(0).getPersonLastName());
         response.setPersonCode(agreement.getPersons().get(0).getPersonCode());
@@ -53,7 +55,7 @@ public class DtoV2Converter {
         PersonDTO person = agreement.getPersons().get(0);
         List<RiskPremium> riskPremiums = person.getRisks().stream()
                 .map(riskDTO -> new RiskPremium(riskDTO.getRiskIc(), riskDTO.getPremium()))
-                .toList();
+                .collect(Collectors.toList());
         response.setRisks(riskPremiums);
 
         return response;
@@ -77,10 +79,11 @@ public class DtoV2Converter {
         agreement.setSelectedRisks(request.getSelectedRisks());
 
         PersonDTO person = buildPerson(request);
-        agreement.setPersons(List.of(person));
+        List<PersonDTO> persons = new ArrayList<>();
+        persons.add(person);
+        agreement.setPersons(persons);
 
         return agreement;
     }
-
 
 }

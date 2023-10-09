@@ -68,7 +68,7 @@ JDBC URL: jdbc:h2:mem:testdb
 http://localhost:8080/insurance/travel/web/v3
 
 Линк для REST (HTTP POST, Content-Type: application/json):
-http://localhost:8080/insurance/travel/api/v3
+http://localhost:8080/insurance/travel/api/v3/
 
 
 13. Линк для Swagger UI (через него можно делать REST запросы
