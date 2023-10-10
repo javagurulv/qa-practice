@@ -5,6 +5,7 @@
       "description": "Field selectedRisks must not be empty!"
     }
   ],
+  "agreementId": null,
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "country": null,

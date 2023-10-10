@@ -2,6 +2,8 @@ package lv.javaguru.travel.insurance.v3.dto.v3;
 
 import lv.javaguru.travel.insurance.v3.core.api.command.TravelCalculatePremiumCoreCommand;
 import lv.javaguru.travel.insurance.v3.core.api.command.TravelCalculatePremiumCoreResult;
+import lv.javaguru.travel.insurance.v3.core.api.command.TravelGetAgreementCoreCommand;
+import lv.javaguru.travel.insurance.v3.core.api.command.TravelGetAgreementCoreResult;
 import lv.javaguru.travel.insurance.v3.core.api.dto.AgreementDTO;
 import lv.javaguru.travel.insurance.v3.core.api.dto.PersonDTO;
 import lv.javaguru.travel.insurance.v3.core.api.dto.RiskDTO;
@@ -18,29 +20,62 @@ import java.util.stream.Collectors;
 @Component
 public class DtoV3Converter {
 
-    public TravelCalculatePremiumCoreCommand buildCoreCommand(TravelCalculatePremiumRequestV3 request) {
+    public TravelCalculatePremiumCoreCommand buildCalculatePremiumCoreCommand(TravelCalculatePremiumRequestV3 request) {
         AgreementDTO agreement = buildAgreement(request);
         return new TravelCalculatePremiumCoreCommand(agreement);
     }
 
-    public TravelCalculatePremiumResponseV3 buildResponse(TravelCalculatePremiumCoreResult coreResult) {
-        return coreResult.hasErrors()
-                ? buildResponseWithErrors(coreResult.getErrors())
-                : buildSuccessfulResponse(coreResult);
+    public TravelGetAgreementCoreCommand buildGetAgreementCoreCommand(Long agreementId) {
+        return new TravelGetAgreementCoreCommand(agreementId);
     }
 
-    private TravelCalculatePremiumResponseV3 buildResponseWithErrors(List<ValidationErrorDTO> coreErrors) {
-        List<ValidationError> errors = transformValidationErrorsToV2(coreErrors);
+    public TravelGetAgreementResponseV3 buildGetAgreementResponse(TravelGetAgreementCoreResult coreResult) {
+        return coreResult.hasErrors()
+                ? buildGetAgreementResponseWithErrors(coreResult.getErrors())
+                : buildGetAgreementSuccessfulResponse(coreResult);
+    }
+
+    private TravelGetAgreementResponseV3 buildGetAgreementSuccessfulResponse(TravelGetAgreementCoreResult coreResult) {
+        AgreementDTO agreement = coreResult.getAgreement();
+        TravelGetAgreementResponseV3 response = new TravelGetAgreementResponseV3();
+        response.setAgreementId(agreement.getAgreementId());
+        response.setAgreementDateFrom(agreement.getAgreementDateFrom());
+        response.setAgreementDateTo(agreement.getAgreementDateTo());
+        response.setCountry(agreement.getCountry());
+        response.setAgreementPremium(agreement.getAgreementPremium());
+
+        List<PersonResponseDTO> personResponseDTOS = agreement.getPersons()
+                .stream()
+                .map(this::buildPersonFromResponse)
+                .collect(Collectors.toList());
+        response.setPersons(personResponseDTOS);
+
+        return response;
+    }
+
+    private TravelGetAgreementResponseV3 buildGetAgreementResponseWithErrors(List<ValidationErrorDTO> coreErrors) {
+        List<ValidationError> errors = transformValidationErrors(coreErrors);
+        return new TravelGetAgreementResponseV3(errors);
+    }
+
+    public TravelCalculatePremiumResponseV3 buildCalculatePremiumResponse(TravelCalculatePremiumCoreResult coreResult) {
+        return coreResult.hasErrors()
+                ? buildCalculatePremiumResponseWithErrors(coreResult.getErrors())
+                : buildCalculatePremiumSuccessfulResponse(coreResult);
+    }
+
+    private TravelCalculatePremiumResponseV3 buildCalculatePremiumResponseWithErrors(List<ValidationErrorDTO> coreErrors) {
+        List<ValidationError> errors = transformValidationErrors(coreErrors);
         return new TravelCalculatePremiumResponseV3(errors);
     }
 
-    private List<ValidationError> transformValidationErrorsToV2(List<ValidationErrorDTO> coreErrors) {
+    private List<ValidationError> transformValidationErrors(List<ValidationErrorDTO> coreErrors) {
         return coreErrors.stream()
                 .map(error -> new ValidationError(error.getErrorCode(), error.getDescription()))
                 .collect(Collectors.toList());
     }
 
-    private TravelCalculatePremiumResponseV3 buildSuccessfulResponse(TravelCalculatePremiumCoreResult coreResult) {
+    private TravelCalculatePremiumResponseV3 buildCalculatePremiumSuccessfulResponse(TravelCalculatePremiumCoreResult coreResult) {
         AgreementDTO agreement = coreResult.getAgreement();
         TravelCalculatePremiumResponseV3 response = new TravelCalculatePremiumResponseV3();
         response.setAgreementId(agreement.getAgreementId());

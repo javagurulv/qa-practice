@@ -40,16 +40,16 @@ public class DtoV1Converter {
     }
 
     private TravelGetAgreementResponseV1 buildGetAgreementResponseWithErrors(List<ValidationErrorDTO> coreErrors) {
-        List<ValidationError> errors = transformValidationErrorsToV1(coreErrors);
+        List<ValidationError> errors = transformValidationErrors(coreErrors);
         return new TravelGetAgreementResponseV1(errors);
     }
 
     private TravelCalculatePremiumResponseV1 buildCalculatePremiumResponseWithErrors(List<ValidationErrorDTO> coreErrors) {
-        List<ValidationError> errors = transformValidationErrorsToV1(coreErrors);
+        List<ValidationError> errors = transformValidationErrors(coreErrors);
         return new TravelCalculatePremiumResponseV1(errors);
     }
 
-    private List<ValidationError> transformValidationErrorsToV1(List<ValidationErrorDTO> coreErrors) {
+    private List<ValidationError> transformValidationErrors(List<ValidationErrorDTO> coreErrors) {
         return coreErrors.stream()
                 .map(error -> new ValidationError(error.getErrorCode(), error.getDescription()))
                 .collect(Collectors.toList());

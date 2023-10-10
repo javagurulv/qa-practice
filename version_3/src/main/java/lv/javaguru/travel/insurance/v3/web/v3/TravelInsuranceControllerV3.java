@@ -29,9 +29,9 @@ public class TravelInsuranceControllerV3 {
     @PostMapping("/insurance/travel/web/v3")
     public String processForm(@ModelAttribute(value = "request") TravelCalculatePremiumRequestV3 request,
                               ModelMap modelMap) {
-        TravelCalculatePremiumCoreCommand coreCommand = dtoV3Converter.buildCoreCommand(request);
+        TravelCalculatePremiumCoreCommand coreCommand = dtoV3Converter.buildCalculatePremiumCoreCommand(request);
         TravelCalculatePremiumCoreResult coreResult = service.calculatePremium(coreCommand);
-        TravelCalculatePremiumResponseV3 response = dtoV3Converter.buildResponse(coreResult);
+        TravelCalculatePremiumResponseV3 response = dtoV3Converter.buildCalculatePremiumResponse(coreResult);
         modelMap.addAttribute("response", response);
         return "travel-calculate-premium-v3";
     }

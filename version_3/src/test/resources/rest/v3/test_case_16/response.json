@@ -5,6 +5,7 @@
       "description": "Field agreementDateFrom must be in the future!"
     }
   ],
+  "agreementId": null,
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "country": null,

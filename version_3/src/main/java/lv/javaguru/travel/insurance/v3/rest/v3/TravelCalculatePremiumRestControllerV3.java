@@ -7,7 +7,7 @@ import lv.javaguru.travel.insurance.v3.core.services.TravelCalculatePremiumServi
 import lv.javaguru.travel.insurance.v3.dto.v3.DtoV3Converter;
 import lv.javaguru.travel.insurance.v3.dto.v3.TravelCalculatePremiumRequestV3;
 import lv.javaguru.travel.insurance.v3.dto.v3.TravelCalculatePremiumResponseV3;
-import lv.javaguru.travel.insurance.v3.rest.common.TravelCalculatePremiumRequestExecutionTimeLogger;
+import lv.javaguru.travel.insurance.v3.rest.common.RestRequestExecutionTimeLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +20,7 @@ public class TravelCalculatePremiumRestControllerV3 {
 
 	@Autowired private TravelCalculatePremiumRequestLoggerV3 requestLogger;
 	@Autowired private TravelCalculatePremiumResponseLoggerV3 responseLogger;
-	@Autowired private TravelCalculatePremiumRequestExecutionTimeLogger executionTimeLogger;
+	@Autowired private RestRequestExecutionTimeLogger executionTimeLogger;
 	@Autowired private TravelCalculatePremiumService calculatePremiumService;
 	@Autowired private DtoV3Converter dtoV3Converter;
 
@@ -36,9 +36,9 @@ public class TravelCalculatePremiumRestControllerV3 {
 
 	private TravelCalculatePremiumResponseV3 processRequest(TravelCalculatePremiumRequestV3 request) {
 		requestLogger.log(request);
-		TravelCalculatePremiumCoreCommand coreCommand = dtoV3Converter.buildCoreCommand(request);
+		TravelCalculatePremiumCoreCommand coreCommand = dtoV3Converter.buildCalculatePremiumCoreCommand(request);
 		TravelCalculatePremiumCoreResult coreResult = calculatePremiumService.calculatePremium(coreCommand);
-		TravelCalculatePremiumResponseV3 response = dtoV3Converter.buildResponse(coreResult);
+		TravelCalculatePremiumResponseV3 response = dtoV3Converter.buildCalculatePremiumResponse(coreResult);
 		responseLogger.log(response);
 		return response;
 	}

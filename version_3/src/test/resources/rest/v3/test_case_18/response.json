@@ -5,6 +5,7 @@
       "description": "Field agreementDateFrom must be less than agreementDateTo!"
     }
   ],
+  "agreementId": null,
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "country": null,

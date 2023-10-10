@@ -9,6 +9,7 @@
       "description": "Risk Type ic = NOT_SUPPORTED_2 not supported!"
     }
   ],
+  "agreementId": null,
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "country": null,

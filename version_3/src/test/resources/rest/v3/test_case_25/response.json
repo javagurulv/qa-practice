@@ -5,6 +5,7 @@
       "description": "Country value = NOT_SUPPORTED not supported!"
     }
   ],
+  "agreementId": null,
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "country": null,

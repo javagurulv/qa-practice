@@ -9,6 +9,7 @@
       "description": "Field personBirthDate must be in the past!"
     }
   ],
+  "agreementId": null,
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "country": null,
