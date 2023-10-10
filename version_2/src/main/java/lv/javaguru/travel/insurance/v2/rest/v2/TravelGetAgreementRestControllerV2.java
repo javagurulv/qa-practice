@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/insurance/travel/api/v1/agreement")
+@RequestMapping("/insurance/travel/api/v2/agreement")
 public class TravelGetAgreementRestControllerV2 {
 
 	@Autowired private TravelGetAgreementRequestLoggerV2 requestLogger;
