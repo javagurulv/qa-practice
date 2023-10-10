@@ -5,6 +5,7 @@
       "description": "Field agreementDateFrom must not be empty!"
     }
   ],
+  "agreementId": null,
   "personFirstName": null,
   "personLastName": null,
   "personCode": null,
