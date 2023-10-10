@@ -2,6 +2,8 @@ package lv.javaguru.travel.insurance.v2.dto.v2;
 
 import lv.javaguru.travel.insurance.v2.core.api.command.TravelCalculatePremiumCoreCommand;
 import lv.javaguru.travel.insurance.v2.core.api.command.TravelCalculatePremiumCoreResult;
+import lv.javaguru.travel.insurance.v2.core.api.command.TravelGetAgreementCoreCommand;
+import lv.javaguru.travel.insurance.v2.core.api.command.TravelGetAgreementCoreResult;
 import lv.javaguru.travel.insurance.v2.core.api.dto.AgreementDTO;
 import lv.javaguru.travel.insurance.v2.core.api.dto.PersonDTO;
 import lv.javaguru.travel.insurance.v2.core.api.dto.ValidationErrorDTO;
@@ -9,25 +11,40 @@ import lv.javaguru.travel.insurance.v2.dto.RiskPremium;
 import lv.javaguru.travel.insurance.v2.dto.ValidationError;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
 public class DtoV2Converter {
 
-    public TravelCalculatePremiumCoreCommand buildCoreCommand(TravelCalculatePremiumRequestV2 request) {
+    public TravelCalculatePremiumCoreCommand buildCalculatePremiumCoreCommand(TravelCalculatePremiumRequestV2 request) {
         AgreementDTO agreement = buildAgreement(request);
         return new TravelCalculatePremiumCoreCommand(agreement);
     }
 
-    public TravelCalculatePremiumResponseV2 buildResponse(TravelCalculatePremiumCoreResult coreResult) {
-        return coreResult.hasErrors()
-                ? buildResponseWithErrors(coreResult.getErrors())
-                : buildSuccessfulResponse(coreResult);
+    public TravelGetAgreementCoreCommand buildGetAgreementCoreCommand(Long agreementId) {
+        return new TravelGetAgreementCoreCommand(agreementId);
     }
 
-    private TravelCalculatePremiumResponseV2 buildResponseWithErrors(List<ValidationErrorDTO> coreErrors) {
+    public TravelGetAgreementResponseV2 buildGetAgreementResponse(TravelGetAgreementCoreResult coreResult) {
+        return coreResult.hasErrors()
+                ? buildGetAgreementResponseWithErrors(coreResult.getErrors())
+                : buildGetAgreementSuccessfulResponse(coreResult);
+    }
+
+
+    public TravelCalculatePremiumResponseV2 buildCalculatePremiumResponse(TravelCalculatePremiumCoreResult coreResult) {
+        return coreResult.hasErrors()
+                ? buildCalculatePremiumResponseWithErrors(coreResult.getErrors())
+                : buildCalculatePremiumSuccessfulResponse(coreResult);
+    }
+
+    private TravelGetAgreementResponseV2 buildGetAgreementResponseWithErrors(List<ValidationErrorDTO> coreErrors) {
+        List<ValidationError> errors = transformValidationErrorsToV1(coreErrors);
+        return new TravelGetAgreementResponseV2(errors);
+    }
+
+    private TravelCalculatePremiumResponseV2 buildCalculatePremiumResponseWithErrors(List<ValidationErrorDTO> coreErrors) {
         List<ValidationError> errors = transformValidationErrorsToV1(coreErrors);
         return new TravelCalculatePremiumResponseV2(errors);
     }
@@ -38,7 +55,7 @@ public class DtoV2Converter {
                 .collect(Collectors.toList());
     }
 
-    private TravelCalculatePremiumResponseV2 buildSuccessfulResponse(TravelCalculatePremiumCoreResult coreResult) {
+    private TravelCalculatePremiumResponseV2 buildCalculatePremiumSuccessfulResponse(TravelCalculatePremiumCoreResult coreResult) {
         AgreementDTO agreement = coreResult.getAgreement();
         TravelCalculatePremiumResponseV2 response = new TravelCalculatePremiumResponseV2();
         response.setAgreementId(agreement.getAgreementId());
@@ -55,11 +72,35 @@ public class DtoV2Converter {
         PersonDTO person = agreement.getPersons().get(0);
         List<RiskPremium> riskPremiums = person.getRisks().stream()
                 .map(riskDTO -> new RiskPremium(riskDTO.getRiskIc(), riskDTO.getPremium()))
-                .collect(Collectors.toList());
+                .toList();
         response.setRisks(riskPremiums);
 
         return response;
     }
+
+    private TravelGetAgreementResponseV2 buildGetAgreementSuccessfulResponse(TravelGetAgreementCoreResult coreResult) {
+        AgreementDTO agreement = coreResult.getAgreement();
+        TravelGetAgreementResponseV2 response = new TravelGetAgreementResponseV2();
+        response.setAgreementId(agreement.getAgreementId());
+        response.setPersonFirstName(agreement.getPersons().get(0).getPersonFirstName());
+        response.setPersonLastName(agreement.getPersons().get(0).getPersonLastName());
+        response.setPersonCode(agreement.getPersons().get(0).getPersonCode());
+        response.setPersonBirthDate(agreement.getPersons().get(0).getPersonBirthDate());
+        response.setAgreementDateFrom(agreement.getAgreementDateFrom());
+        response.setAgreementDateTo(agreement.getAgreementDateTo());
+        response.setCountry(agreement.getCountry());
+        response.setMedicalRiskLimitLevel(agreement.getPersons().get(0).getMedicalRiskLimitLevel());
+        response.setAgreementPremium(agreement.getAgreementPremium());
+
+        PersonDTO person = agreement.getPersons().get(0);
+        List<RiskPremium> riskPremiums = person.getRisks().stream()
+                .map(riskDTO -> new RiskPremium(riskDTO.getRiskIc(), riskDTO.getPremium()))
+                .toList();
+        response.setRisks(riskPremiums);
+
+        return response;
+    }
+
 
     private PersonDTO buildPerson(TravelCalculatePremiumRequestV2 request) {
         PersonDTO person = new PersonDTO();
@@ -79,9 +120,7 @@ public class DtoV2Converter {
         agreement.setSelectedRisks(request.getSelectedRisks());
 
         PersonDTO person = buildPerson(request);
-        List<PersonDTO> persons = new ArrayList<>();
-        persons.add(person);
-        agreement.setPersons(persons);
+        agreement.setPersons(List.of(person));
 
         return agreement;
     }

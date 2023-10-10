@@ -9,6 +9,7 @@
       "description": "Risk Type ic = NOT_VALID_RISK_IC_2 not supported!"
     }
   ],
+  "agreementId": null,
   "personFirstName": null,
   "personLastName": null,
   "personCode": null,

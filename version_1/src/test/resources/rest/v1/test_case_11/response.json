@@ -9,6 +9,7 @@
       "description": "Field agreementDateFrom must be less than agreementDateTo!"
     }
   ],
+  "agreementId": null,
   "personFirstName": null,
   "personLastName": null,
   "personCode": null,
