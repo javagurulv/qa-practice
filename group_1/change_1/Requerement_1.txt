@@ -1,0 +1,5 @@
+Add a "Clear Form" button to the UI - pressing it removes
+all entered data, clears the displayed calculated premium,
+and removes error information. [#JGPB-6].
+
+Add in all versions!
