@@ -72,11 +72,12 @@
     <input id="selectedRisks"
            type="text"
            th:field="${request.selectedRisks}"
-           title="Enter insurance risks (TRAVEL_MEDICAL, TRAVEL_TRIP_CANCELLATION, TRAVEL_LOSS_BAGGAGE, TRAVEL_THIRD_PARTY_LIABILITY, TRAVEL_EVACUATION, TRAVEL_SPORT_ACTIVITIES)">
+           title="Enter insurance risks (TRAVEL_MEDICAL, TRAVEL_TRIP_CANCELLATION, TRAVEL_LOSS_BAGGAGE, TRAVEL_THIRD_PARTY_LIABILITY, TRAVEL_EVACUATION, TRAVEL_SPORT_ACTIVITIES)">>
     <br><br>
 
     <button type="submit">Calculate Premium</button>
 </form>
+
 
 <td th:if="${response.errors != null}">
     <h3>Travel Insurance Premium Calculation ERRORS</h3>
@@ -88,9 +89,11 @@
     </tr>
 </td>
 
+<br>
+
 <h3>
     <label th:if="${response.agreementPremium != null}"
-           th:text="'AGREMENT PREMIUM: ' + ${response.agreementPremium}"></label>
+           th:text="'AGREEMENT PREMIUM: ' + ${response.agreementPremium}"></label>
 </h3>
 
 <br>
@@ -106,7 +109,7 @@
 
 <br>
 
-<button onclick="window.location.href='/insurance/travel/web/v1';">Clear Form</button>
+<button onclick="window.location.href='/insurance/travel/web/v2';">Clear Form</button>
 
 </body>
 </html>

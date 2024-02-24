@@ -8,3 +8,4 @@ include 'group_1:change_1:version_2'
 include 'group_1:change_1:version_3'
 
 include 'group_1:change_2:version_1'
+include 'group_1:change_2:version_2'
