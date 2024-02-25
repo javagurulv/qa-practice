@@ -1,0 +1,29 @@
+1. Set up the development environment, including IDE, Gradle, JDK, and database.
+2. Clone the GitHub repository and configure the project settings.
+3. Design and create the database schema for country_default_day_rate, age_coefficient, and medical_risk_limit_level tables.
+4. Implement the backend logic for calculating the insurance premium based on the provided formula.
+5. Implement the backend logic for retrieving CountryDefaultDayPremium values from the country_default_day_rate table.
+6. Implement the backend logic for retrieving AgeCoefficient values from the age_coefficient table based on the user's birthdate.
+7. Implement the backend logic for retrieving InsuranceLimitCoefficient values from the medical_risk_limit_level table based on the selected Medical Risk Limit Level.
+8. Develop input validation for all mandatory fields, including birthdate, agreement start and end dates, and other fields.
+9. Implement error handling and error messages for validation and premium calculation issues.
+10. Develop the REST API for submitting the request and receiving the calculated premium in the response.
+11. Design and create the web interface for user input and displaying the calculated premium.
+12. Integrate the web application with the REST API.
+13. Configure and integrate Swagger UI documentation for the REST API.
+14. Set up the database connection for debugging purposes.
+15. Implement user-friendly tooltips or help text for fields that might be unclear.
+16. Design a visually appealing and modern UI/UX for the web interface.
+17. Ensure the web interface is responsive and compatible with multiple devices, including desktops, laptops, tablets, and mobile phones.
+18. Implement proper error handling and fallback mechanisms.
+19. Implement security measures to protect user data and restrict access to sensitive information.
+20. Implement logging and monitoring capabilities.
+21. Write comprehensive documentation, including in-code comments, API documentation, and end-user instructions.
+22. Develop a test suite covering unit tests, integration tests, and end-to-end tests.
+23. Follow industry best practices during development, such as version control, code reviews, continuous integration, and deployment.
+24. Implement a mechanism for user feedback and issue reporting.
+25. Plan for ongoing support and maintenance of the application.
+26. Design the system for easy integration with third-party services, data sources, or other external systems.
+27. Implement internationalization and localization support for additional languages and regional settings.
+
+Note: This task list assumes that the project is starting from scratch. Some tasks may already be completed or partially completed if the project is in progress.

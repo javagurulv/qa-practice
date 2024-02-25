@@ -1,0 +1,7 @@
+Add field limits to all fields equal to DB (200) [#JGPB-28]
+
+New error message added: ERROR_CODE_22.
+
+Validation added only for Person first and last name fields.
+
+Bug (fix in 3rd version only).
