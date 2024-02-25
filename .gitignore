@@ -1,10 +1,16 @@
 #java specific
 *.class
 *.jar
+*.log
+
+#Mac
+**/.DS_Store
 
 ### Gradle ###
 .gradle
-/build/
+**/build
+**/logs
+**/out
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
@@ -21,17 +27,3 @@
 *.iws
 *.iml
 *.ipr
-
-/logs
-
-/version_1/build/
-/version_1/out/
-/version_1/logs/
-
-/version_2/build/
-/version_2/out/
-/version_2/logs/
-
-/version_3/build/
-/version_3/out/
-/version_3/logs/
