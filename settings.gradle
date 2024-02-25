@@ -26,3 +26,7 @@ include 'group_1:change_5:version_3'
 include 'group_1:change_6:version_1'
 include 'group_1:change_6:version_2'
 include 'group_1:change_6:version_3'
+
+include 'group_1:change_7:version_1'
+include 'group_1:change_7:version_2'
+include 'group_1:change_7:version_3'
