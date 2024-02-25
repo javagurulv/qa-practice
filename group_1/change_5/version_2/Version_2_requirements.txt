@@ -1,0 +1,154 @@
+Travel Policy Calculator version 2 requirements.
+
+1. Полис только для одной персоны.
+
+2. Полис включает только медицинский риск (TRAVEL_MEDICAL).
+
+4. Формула расчета премии для медицинского риска:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+
+
+CountryDefaultDayPremium - дневная премия в стране посещения,
+в системе должна быть реализована возможность для бизнеса
+задавать дневную премию в зависимости от страны посещения
+(Latvia -> 2 euro, Spain -> 5 euro, etc.).
+
+DayCount - количество дней пребывания клиента в стране, срок
+действия страхового полиса.
+
+AgeCoefficient - коэффициент зависящий от возраста клиента.
+В системе должна быть возможность задать для каждого возраста
+свой коэффициент (например: 0 - 10 лет -> 0.5; 11 - 17 лет -> 0.8;
+18 - 25 лет -> 1.2; 26 - 50 лет -> 1.3 и так далее (коэффициенты
+в примере приведены только для иллюстрации идеи)).
+
+InsuranceLimitCoefficient - коэффициент зависящий от лимита страхования.
+Лимит страхования это максимальная сумма выплаты клиенту в случае
+наступления страхового случая. В системе должна быть возможность
+задать зависимость лимита суммы выплаты и коэффициента
+(например: 0 - 10000 euro -> 1.0; 10001 - 15000 -> 1.5; 15001 -> 2.0).
+
+
+
+5. Поддерживаемые страны: SPAIN, JAPAN, LATVIA.
+
+
+6. Таблица в базе данных country_default_day_rate для определения
+значения коэффициента CountryDefaultDayPremium. Зависит от страны.
+
+7. Таблица в базе данных для определения AgeCoefficient
+(table age_coefficient). Определяет зависимость между возрастом
+персоны и AgeCoefficient. Возраст определяется по дате рождения.
+
+
+
+8. Допустимые значения для MEDICAL_RISK_LIMIT_LEVEL:
+LEVEL_10000  (страховые выплаты до 10000),
+LEVEL_15000  (страховые выплаты до 15000),
+LEVEL_20000  (страховые выплаты до 20000),
+LEVEL_50000  (страховые выплаты до 50000).
+
+
+9. Таблица в базе данных medical_risk_limit_level задаёт зависимость
+между указанным значением MEDICAL_RISK_LIMIT_LEVEL и InsuranceLimitCoefficient.
+
+
+10. Все поля являются обязательными к заполнению.
+
+11. Линк для доступа к базе данных при работающем приложении:
+http://localhost:8080/h2-console
+User name: sa
+Password:
+Driver Class: org.h2.Driver
+JDBC URL: jdbc:h2:mem:testdb
+
+
+12. Линк для доступа к web части:
+http://localhost:8080/insurance/travel/web/v2
+
+Линк для REST (HTTP POST, Content-Type: application/json):
+http://localhost:8080/insurance/travel/api/v2/
+
+Линк для REST (HTTP GET):
+http://localhost:8080/insurance/travel/api/v2/agreement/{agreementId}
+{agreementId} - any number
+
+
+
+13. Линк для Swagger UI (через него можно делать REST запросы
+даже без Postman):
+http://localhost:8080/swagger-ui/index.html
+
+
+14. Correct REST request:
+{
+  "personFirstName" : "Vasja",
+  "personLastName" : "Pupkin",
+  "personCode" : "123456-12345",
+  "personBirthDate" : "2000-05-29",
+  "agreementDateFrom" : "2025-05-25",
+  "agreementDateTo" : "2025-05-29",
+  "country" : "SPAIN",
+  "medicalRiskLimitLevel" : "LEVEL_10000",
+  "selected_risks":["TRAVEL_MEDICAL"]
+}
+
+
+15. Correct REST response:
+{
+  "errors": null,
+  "personFirstName": "Vasja",
+  "personLastName": "Pupkin",
+  "personCode" : "123456-12345",
+  "personBirthDate": "2000-05-29",
+  "agreementDateFrom": "2025-05-25",
+  "agreementDateTo": "2025-05-29",
+  "country": "SPAIN",
+  "medicalRiskLimitLevel" : "LEVEL_10000",
+  "agreementPremium": 11.00,
+  "risks": [
+      {
+        "riskIc": "TRAVEL_MEDICAL",
+        "premium": 11.00
+      }
+  ]
+}
+
+
+16. Запуск приложения (вариант 1) из IDEA:
+запустите класс InsuranceApplication из пакета lv.javaguru.travel.insurance.
+
+17. Запуск приложения (вариант 2) из консоли при установленной
+на компе JDK 18:
+java -jar insurance-calculator-2.0.jar
+
+
+18. Линк на GitHub repo:
+https://github.com/javagurulv/qa-practice
+
+19. IDEA Community Edition free:
+https://www.jetbrains.com/idea/download
+
+20. Inside IDEA after project clone from GitHub:
+File -> Project Structure -> Project (tab from the left)
+
+SDK: corretto-18
+Language Level: SDK default
+
+
+21. Inside IDEA after project clone from GitHub:
+File -> Settings -> Gradle
+Gradle JVM: Project SDK (corretto-18)
+
+
+
+22. Все баги из первой версии исправлены.
+
+Добавлен новый баг:
+AgeCoefficient - не работает (он выключен и всегда 1)
+medical.risk.age.coefficient.enabled=false
+
+
+Добавлен новый баг:
+Если DayCount > 30 то DayCount = 30. Цена полиса не считается больше
+чем на месяц.
