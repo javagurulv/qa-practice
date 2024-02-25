@@ -30,7 +30,8 @@
     <input id="personCode"
            type="text"
            th:field="${request.personCode}"
-           title="Enter traveler personal code">
+           pattern="d{6}-d{5}"
+           title="Enter traveler personal code. Format: 120120-09812">
     <br><br>
 
     <label for="personBirthDate">Birth Date:</label>
@@ -72,7 +73,7 @@
     <input id="selectedRisks"
            type="text"
            th:field="${request.selectedRisks}"
-           title="Enter insurance risks (TRAVEL_MEDICAL, TRAVEL_TRIP_CANCELLATION, TRAVEL_LOSS_BAGGAGE, TRAVEL_THIRD_PARTY_LIABILITY, TRAVEL_EVACUATION, TRAVEL_SPORT_ACTIVITIES)">>
+           title="Enter insurance risks (TRAVEL_MEDICAL, TRAVEL_TRIP_CANCELLATION, TRAVEL_LOSS_BAGGAGE, TRAVEL_THIRD_PARTY_LIABILITY, TRAVEL_EVACUATION, TRAVEL_SPORT_ACTIVITIES)">
     <br><br>
 
     <button type="submit">Calculate Premium</button>
