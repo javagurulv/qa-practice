@@ -1,0 +1,310 @@
+Task 1: UI Development
+
+Common task description:
+Create web UI page for Travel Insurance Calculator.
+This page must contain all necessary functionality to enter
+all insurance policy parameters for one person, invoke policy premium
+calculation functionality and check the results.
+
+Task details:
+
+Input fields:
+- First Name: text
+- Last Name: text
+- Person Code: text
+- Birth Date: date (format: dd/mm/yyyy)
+- Agreement Date From: date (format: dd/mm/yyyy)
+- Agreement Date To: date (format: dd/mm/yyyy)
+- Country: text
+- Medical Risk Limit Level: text
+- Selected Risks: text
+
+Button: Calculate
+
+Result should contain:
+AGREEMENT PREMIUM: 35.75 (calculated policy premium)
+
+
+Task status: DONE (by programmer)
+
+=========================================================
+
+Task 2: UI Error handling
+
+Common task description:
+Create possibility to show on web page validation errors
+if they occur in premium calculation process.
+
+Task details:
+If premium calculation process return errors, then on web page show:
+- Travel Insurance Premium Calculation ERRORS
+- List of errors, one error in a line in following format:
+  ERROR_CODE_XXX error_message_description
+
+Task status: DONE (by programmer)
+
+
+=========================================================
+
+Task 3: Validate calculation input
+
+Common task description:
+On a backend develop code to validate agreement premium
+calculation parameters. Return errors if they occur.
+
+Task details:
+
+Following error codes and their validations must be developed
+on backend side to provide user input validation:
+ERROR_CODE_1=Field agreementDateFrom must be in the future!
+ERROR_CODE_2=Field agreementDateFrom must not be empty!
+ERROR_CODE_3=Field agreementDateTo must be in the future!
+ERROR_CODE_4=Field agreementDateTo must not be empty!
+ERROR_CODE_5=Field agreementDateFrom must be less than agreementDateTo!
+ERROR_CODE_6=Field selectedRisks must not be empty!
+ERROR_CODE_7=Field personFirstName must not be empty!
+ERROR_CODE_8=Field personLastName must not be empty!
+ERROR_CODE_9=Risk Type ic = {NOT_EXISTING_RISK_TYPE} not supported!
+ERROR_CODE_10=Field country must not be empty!
+ERROR_CODE_11=Field personBirthDate must not be empty!
+ERROR_CODE_12=Field personBirthDate must be in the past!
+ERROR_CODE_13=Field medicalRiskLimitLevel must not be empty!
+ERROR_CODE_14=MedicalRiskLimitLevel value = {NOT_SUPPORTED_MEDICAL_RISK_LIMIT_LEVEL} not supported!
+ERROR_CODE_15=Country value = {NOT_SUPPORTED_COUNTRY} not supported!
+ERROR_CODE_16=Field personCode must not be empty!
+
+Task status: DONE (by programmer)
+
+
+=========================================================
+
+Task 4: Develop code to calculate CountryDefaultDayPremium
+
+Common task description:
+Medical risk premium calculation formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+Develop code to and related database structures to provide
+CountryDefaultDayPremium calculation from formula above.
+
+Task details:
+Create database table country_default_day_rate with two
+columns (COUNTRY_IC and DEFAULT_DAY_RATE). Table content example:
+COUNTRY_IC  	DEFAULT_DAY_RATE
+LATVIA      	1.00
+SPAIN	        2.50
+JAPAN	        3.50
+
+Develop backend code to get DEFAULT_DAY_RATE coefficient by
+country ic code.
+
+To mountain supported country list, please create classifiers
+table in database with following columns (TITLE, DESCRIPTION).
+This table will contain all classifiers (predefined values).
+TITLE  	    DESCRIPTION
+COUNTRY	    Country classifier  - this is country classifier.
+
+Available(supported) COUNTRY classifier values will be stored
+inside classifier_values database table. For COUNTRY classifier
+they are following:
+IC  	DESCRIPTION
+LATVIA	Country Latvia
+SPAIN	Country Spain
+JAPAN	Country Japan
+
+By default, application support only this three country:
+LATVIA, SPAIN, JAPAN.
+
+
+Task status: DONE (by programmer)
+
+
+=========================================================
+
+Task 5: Develop code to calculate DayCount
+
+Common task description:
+Medical risk premium calculation formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+Develop code to provide DayCount calculation from formula above.
+
+Task details:
+DayCount = Agreement Date To - Agreement Date From
+DayCount must be calculated as a difference (in days) between
+Agreement Date To - Agreement Date From.
+
+Task status: DONE (by programmer)
+
+=========================================================
+
+Task 6: Develop code to calculate AgeCoefficient
+
+Common task description:
+Medical risk premium calculation formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+Develop code to and related database structures to provide
+AgeCoefficient calculation from formula above.
+
+Task details:
+Insured person age must be calculated as
+(in full years: 1, 4, 18, 50, etc.):
+current date - person birthdate.
+
+To store AgeCoefficient values database table age_coefficient
+must be developed. Age_coefficient table must have the following
+structure:
+AGE_FROM  	AGE_TO  	COEFFICIENT
+0	        5	        1.10
+6	        10      	0.70
+11	        17      	1.00
+18	        40      	1.10
+41	        65      	1.20
+65	        150     	1.50
+
+Task status: DONE (by programmer)
+
+
+=========================================================
+
+Task 7: Develop code to calculate InsuranceLimitCoefficient
+
+Common task description:
+Medical risk premium calculation formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+Develop code to and related database structures to provide
+InsuranceLimitCoefficient calculation from formula above.
+
+Task details:
+Application must support following medical risk
+insurance limit levels:
+LEVEL_10000 (0 - 10000 euro)
+LEVEL_15000 (10001 - 15000 euro)
+LEVEL_20000 (15001 - 20000 euro)
+LEVEL_50000 (20001 - 50000 euro)
+
+
+To mountain supported medical risk insurance limit levels,
+please create classifiers
+table in database with following columns (TITLE, DESCRIPTION).
+This table will contain all classifiers (predefined values).
+TITLE  	                    DESCRIPTION
+MEDICAL_RISK_LIMIT_LEVEL	Medical Risk limit level classifier
+
+Available(supported) MEDICAL_RISK_LIMIT_LEVEL classifier values
+will be stored inside classifier_values database table.
+For MEDICAL_RISK_LIMIT_LEVEL classifier they are following:
+IC            	DESCRIPTION
+LEVEL_10000	    Medical Risk 10000 euro limit level
+LEVEL_15000	    Medical Risk 15000 euro limit level
+LEVEL_20000	    Medical Risk 20000 euro limit level
+LEVEL_50000	    Medical Risk 50000 euro limit level
+
+Medical risk limit coefficient values must be stored
+in database table medical_risk_limit_level with following structure:
+MEDICAL_RISK_LIMIT_LEVEL_IC  	COEFFICIENT
+LEVEL_10000	                    1.00
+LEVEL_15000	                    1.20
+LEVEL_20000	                    1.50
+LEVEL_50000	                    2.00
+
+
+Task status: DONE (by programmer)
+
+=========================================================
+
+Task 8: Develop code to calculate Medical risk premium formula
+
+Common task description:
+Medical risk premium calculation formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+
+Task details:
+Develop code to calculate premium for medical rusk
+according the formula:
+Premium = CountryDefaultDayPremium * DayCount * AgeCoefficient * InsuranceLimitCoefficient
+
+Task status: DONE (by programmer)
+
+=========================================================
+
+Task 9: Develop code to round calculated premium to XX.YY format
+
+Common task description:
+Medical risk premium must have two numbers after "." (XX.YY format).
+
+Task details:
+Create the code to correctly round calculated premium
+using XX.YY format.
+
+Task status: DONE (by programmer)
+
+=========================================================
+
+Task 10: Multi person medical risk insurance calculation
+
+Common task description:
+Develop possibility to include multiple persons to
+policy premium calculation.
+
+Task status: IN PROGRESS (for programmer)
+
+=========================================================
+
+Task 11: Develop REST API for multi person medical
+risk insurance calculation
+
+Common task description:
+Develop possibility to invoke policy premium calculation
+using REST API.
+
+Task status: IN PROGRESS (for programmer)
+
+
+=========================================================
+
+Task 12 (BUG): InsuranceLimitCoefficient - not working, always = 1
+
+Common task description:
+InsuranceLimitCoefficient - not working, always = 1
+
+Task status: DONE (fixed by programmer)
+
+
+=========================================================
+
+Task 13 (BUG): Person Birth Date can be in the future
+
+Common task description:
+Person Birth Date can be in the future
+
+Task status: DONE (fixed by programmer)
+
+
+=========================================================
+
+Task 14 (BUG): Agreement Date From must be < Agreement Date To
+
+Common task description:
+Agreement Date From must be < Agreement Date To
+
+Task status: DONE (fixed by programmer)
+
+
+=========================================================
+
+Task 15 (BUG): AGREMENT PREMIUM: 7.70 - UI grammar mistake
+
+Common task description:
+AGREMENT PREMIUM: 7.70 - UI grammar mistake.
+
+Task status: DONE (fixed by programmer)
+
+
+=========================================================
+
+Task 16 (BUG): Person Last Name can be empty (validation not working)
+
+Common task description:
+Person Last Name can be empty (validation not working),
+must be not empty.
+
+Task status: DONE (fixed by programmer)
