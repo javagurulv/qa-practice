@@ -1,0 +1,5 @@
+The name of the "Calculate Premium"
+button in the application does not correspond
+to the documentation. [#JGPB-12]
+
+Bug (fix in 3rd version only).

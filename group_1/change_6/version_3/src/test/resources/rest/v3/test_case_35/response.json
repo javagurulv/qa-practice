@@ -1,0 +1,18 @@
+{
+  "errors": [
+    {
+      "errorCode": "ERROR_CODE_16",
+      "description": "Field personCode must not be empty!"
+    },
+    {
+      "errorCode": "ERROR_CODE_16",
+      "description": "Field personCode must not be empty!"
+    }
+  ],
+  "agreementId": null,
+  "agreementDateFrom": null,
+  "agreementDateTo": null,
+  "country": null,
+  "agreementPremium": null,
+  "persons": null
+}

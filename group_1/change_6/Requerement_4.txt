@@ -1,0 +1,5 @@
+Fields "Agreement Date From" and "Agreement Date To"
+should start from Tomorrow date by default as today
+date is not allowed. [#JGPB-21]
+
+Add in all versions!

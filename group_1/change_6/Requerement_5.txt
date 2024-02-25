@@ -1,0 +1,4 @@
+Add allowed symbols validation to"First Name"
+and "Last Name" fields (latin chars, hyphen and spaces) [#JGPB-35]
+
+Add in all versions!
