@@ -1,3 +1,6 @@
 Add format validation into field "Person Code" - XXXXXX-XXXXX. [#JGPB-20]
 
+Add new error message:
+ERROR_CODE_19=Personal code [{PERSONAL_CODE}] does not match the pattern XXXXXX-XXXXX!
+
 Add in all versions!
